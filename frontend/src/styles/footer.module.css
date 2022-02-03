@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    --dark: #043034 ;  /*green*/
+    --highlight: #e7d49e; /*lighter yellow */
+    --light: #ccc5b9;
+    --mid: #d8ae5e; /*dark yellow*/
+    --white: #fffcf2;
+}
+
+.footer {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark);
+    color: var(--mid);
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    color: var(--mid);
+    margin-left: 1rem;
+}
+
+.logoImage{
+    background: url("../images/empathetic_lions.jpg") no-repeat center center/cover;
+    height: 81px;
+    width: 81px;
+    margin: 0;
+}
+
+.footerList {
+    display: flex;
+    list-style: none;    
+}
+
+.footerListItem {
+    font-size: 1rem;
+    margin: 0 1rem;
+    padding: 1rem 1rem
+}
+
+.logoImage:hover {
+    cursor: pointer;
+}
+
+.footerListItem:hover{
+    cursor: pointer;
+    color: var(--highlight);
+}
+
+.authorsDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerAuthorList{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    width: 300px;
+}
+
+.footerAuthorItem:hover{
+    color: var(--highlight);
+    text-decoration: underline;
+}
+
+.authorsDiv{
+    display: flex;
+    justify-content: center;
+    width: 290px;
+}
+
+.authorsTitle{
+    text-align: center;
+    font-weight: bold;
+}
+
+.footerAuthorItem{
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+}
+
+.authorsListDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
