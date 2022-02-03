@@ -16,10 +16,8 @@ export default {
     },
     migrations: {
       directory: 'migrations'
-      // tableName: 'users',
-      // tableName: 'comments'
     },
     seeds: {
-      directory: 'knex/seeds'
+      directory: 'seeds'
     }
 };

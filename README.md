@@ -4,10 +4,17 @@
 ## Commands to remember:
 ```
 # create migration file
-npx knex migrate:make users --knexfile db/knexfile.js
+npm run migrate:make [table_name]
 
-# creates table
-npx knex migrate:latest --knexfile db/knexfile.js
+# creates/updates tables
+npm run migrate
+
+# create seed files
+npx knex seed:make [seed_file_name] --knexfile db/knexfile.js
+
+# run seed files
+npm run userSeed 
+npm run commentSeed
 ```
 
 

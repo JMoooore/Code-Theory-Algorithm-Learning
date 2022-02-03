@@ -8,7 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "migrate":"npx knex migrate:latest --knexfile db/knexfile.js",
-    "migrate:make" : "npx knex migrate:make --knexfile db/knexfile.js"
+    "migrate:make" : "npx knex migrate:make --knexfile db/knexfile.js",
+    "userSeed" : "npx knex seed:run --specific=seed_users.js --knexfile db/knexfile.js",
+    "commentSeed" : "npx knex seed:run --specific=seed_comments.js --knexfile db/knexfile.js",
+    "allSeeds": "npx knex seed:run --specific=seed_users.js --knexfile db/knexfile.js && npx knex seed:run --specific=seed_comments.js --knexfile db/knexfile.js"
   },
   "keywords": [],
   "author": "",
