@@ -1,5 +1,5 @@
-import dotenv from 'dotenv'
-dotenv.config()
+// import {} from 'dotenv/config'
+import './env.js'
 import cors from 'cors'
 import express from 'express'
 import * as routes from './routes/index.js'
@@ -8,7 +8,7 @@ const corsConfig = {
     origin: 'http://localhost:3000'
 }
 app.use(cors(corsConfig))
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT 
 app.use(express.json())
 
 app.listen(PORT, ()=>{
