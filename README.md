@@ -1,6 +1,15 @@
 # Frontend Capstone
 
 
+## Commands to remember:
+```
+# create migration file
+npx knex migrate:make users --knexfile db/knexfile.js
+
+# creates table
+npx knex migrate:latest --knexfile db/knexfile.js
+```
+
 
 ## Getting started
 
