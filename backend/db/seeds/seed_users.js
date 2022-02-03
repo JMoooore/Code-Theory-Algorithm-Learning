@@ -8,7 +8,7 @@ export function seed(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('users').insert([
-        {first_name: 'paul', last_name: 'devin', email: 'pd@email.com', password: '1234'},
+        {first_name: 'paul', last_name: 'devlin', email: 'pd@email.com', password: '1234'},
         {first_name: 'kevin', last_name: 'heleodoro', email: 'kh@email.com', password: '1234'},
       ]);
     });

@@ -6,6 +6,7 @@ export function up(knex) {
   return knex.schema
     .createTable('comments', table => {
     table.increments('id').primary() // unique
+    table.integer('user_id')
     table.foreign('user_id').references('users.id')
     table.string('content')
     table.timestamp('created_at').defaultTo(knex.fn.now())
