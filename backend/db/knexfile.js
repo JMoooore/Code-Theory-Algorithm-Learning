@@ -1,5 +1,5 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import '../env.js'
+
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
@@ -8,7 +8,7 @@ dotenv.config()
 export default {
     client: 'postgresql',
     connection: {
-      host: process.env.DATABASE_HOST,
+      host:     process.env.DATABASE_HOST,
       database: process.env.DATABASE_NAME,
       user:     process.env.DATABASE_USER,
       password: process.env.DATABASE_PASS,
