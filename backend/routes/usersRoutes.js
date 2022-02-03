@@ -1,4 +1,4 @@
-import {Router, json, application} from 'express'
+import {Router, json} from 'express'
 import db from '../db/index.js'
 
 
@@ -52,10 +52,10 @@ users.patch('/:id', async (req, res) => {
 users.delete('/:id', async (req, res) => {
     try{
         const id = req.params.id
-        await db('users')
+        const result = await db('users')
         .where({id: id})
-        .del()
-        res.json({message: `deleted user a id ${id}`})
+        .del().returning('*')
+        res.json(result)
 
     }catch(err){
         errorHandler(err, res)
