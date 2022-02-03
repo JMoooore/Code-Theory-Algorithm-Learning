@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "migrate":"npx knex migrate:latest --knexfile db/knexfile.js",
+    "migrate:make" : "npx knex migrate:make --knexfile db/knexfile.js",
+    "seed:run": "npx knex seed:run --knexfile db/knexfile.js"
   },
   "keywords": [],
   "author": "",

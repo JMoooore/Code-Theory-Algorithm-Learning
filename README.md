@@ -1,6 +1,22 @@
 # Frontend Capstone
 
 
+## Commands to remember:
+```
+# create migration file
+npm run migrate:make [table_name]
+
+# creates/updates tables
+npm run migrate
+
+# create seed files
+npx knex seed:make [seed_file_name] --knexfile db/knexfile.js
+
+# run seed files
+npm run userSeed 
+npm run commentSeed
+```
+
 
 ## Getting started
 
