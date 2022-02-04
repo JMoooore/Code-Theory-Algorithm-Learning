@@ -12,7 +12,11 @@ export default function Comment(props){
         <textarea></textarea>
       </form>
       {props.comments.map(e => {
-        return <CommentItem comment={e} users={props.users}/>
+        return <CommentItem comment={e} user={props.users.filter(a => {
+          if(a.id === e.user_id) {
+            return a;
+          }
+          })}/>
       })}
     </ul>
   )
