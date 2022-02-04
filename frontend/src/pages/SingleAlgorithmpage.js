@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '../styles/singleAlgorithmpage.module.css'
 
-export default function SingleAlgorithmpage({algorithm}) {
+export default function SingleAlgorithmpage(props) {
+  const {algorithm} = props
   return (
     <>
     <div className={styles.mainContainer}>
@@ -14,10 +15,10 @@ export default function SingleAlgorithmpage({algorithm}) {
         <div className={styles.descriptionContainer}>
             <div className={styles.descriptionCard}>
                 <div className={styles.descriptionTitle}>
-                {/* <h1>{algorithm.title}</h1> */}
+                    <h1>{algorithm.title}</h1>
                 </div>
                 <div className={styles.descriptionBody}>
-                    {/* <p>{algorithm.description}</p> */}
+                    <p>{algorithm.description}</p>
                 </div>
             </div>
         </div>
