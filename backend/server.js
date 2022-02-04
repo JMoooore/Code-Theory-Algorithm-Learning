@@ -1,5 +1,4 @@
-// import {} from 'dotenv/config'
-import './env.js'
+import {} from 'dotenv/config'
 import cors from 'cors'
 import express from 'express'
 import * as routes from './routes/index.js'

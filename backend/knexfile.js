@@ -1,4 +1,4 @@
-import '../env.js'
+import {} from 'dotenv/config'
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -15,9 +15,9 @@ export default {
       port: 5432
     },
     migrations: {
-      directory: 'migrations'
+      directory: 'db/migrations'
     },
     seeds: {
-      directory: 'seeds'
+      directory: 'db/seeds'
     }
 };
