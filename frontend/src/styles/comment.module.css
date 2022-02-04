@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  --dark: #043034 ;  /*green*/
+  --highlight: #e7d49e; /*lighter yellow */
+  --light: #ccc5b9;
+  --mid: #d8ae5e; /*dark yellow*/
+  --white: #fffcf2;
+}
+
+.commentContainer {
+  width: 50%;
+  background: var(--dark);
+}
+
+.commentTitle {
+  /* width: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mid);
+}
+
+.commentBody {
+  color: var(--mid);
+}
+
+.commentPhoto {
+  border-radius: 50%;
+  background-color: var(--highlight);
+  height: 25px;
+  width: 25px;
+}
