@@ -8,7 +8,7 @@ export default function Comment(props){
   return (
     <div className={styles.commentContainer}>
       <div className={styles.commentTitle}>
-        <h2>Comments</h2>
+        <h1>Comments</h1>
       </div>
 
       <div className={styles.commentBody}>
