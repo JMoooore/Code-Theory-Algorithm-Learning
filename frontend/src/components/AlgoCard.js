@@ -6,11 +6,11 @@ export default function AlgoCard(props) {
 <>
 <div className={styles.cardDiv}>
     <div className={styles.cardMain}>
-        <img className={styles.thumbnail} src='https://images.pexels.com/photos/422290/pexels-photo-422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'/>
-        <div className={styles.cardTitle}>Title</div>
+        <img className={styles.thumbnail} src={props.image}/>
+        <div className={styles.cardTitle}>{props.title}</div>
     </div>
     <div className={styles.cardDescDiv}>
-        <p className={styles.cardDesc}>dkjf;akdjf djfkd fkjads;fkj df dfdkf dj dkjf;kdjf d;sfj dkjf;kadj;fkjd;oifj;kdjf;kad fkdj f  f dkjf df;dfjdfj;akdf;kdsfj;kad f d ffdsaf</p>
+        <p className={styles.cardDesc}>{props.body}</p>
     </div>
 </div>
 </>
