@@ -8,10 +8,12 @@ export default function Comment(props){
   return (
     <ul className={styles.commentContainer}>
       <h1 className={styles.commentTitle}>Comments</h1>
-      <CommentItem />
-      <CommentItem />
-      <CommentItem />
-      <CommentItem />
+      <form className={styles.comment}>
+        <textarea></textarea>
+      </form>
+      {props.comments.map(e => {
+        return <CommentItem comment={e} users={props.users}/>
+      })}
     </ul>
   )
 }
