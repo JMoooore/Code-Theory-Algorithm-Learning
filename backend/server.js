@@ -1,4 +1,4 @@
-import './.env.js';
+import 'dotenv/config';
 import cors from 'cors'
 import express from 'express'
 import * as routes from './routes/index.js'

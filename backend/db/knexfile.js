@@ -1,4 +1,4 @@
-import '../.env.js';
+import 'dotenv/config';
 
 export default {
     client: 'postgresql',
