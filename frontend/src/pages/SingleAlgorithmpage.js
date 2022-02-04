@@ -11,9 +11,6 @@ export default function SingleAlgorithmpage() {
                 <div className={styles.animationControls}></div>
             </div>
         </div>
-
-
-
         <div className={styles.descriptionContainer}>
             <div className={styles.descriptionCard}>
                 <div className={styles.descriptionTitle}>
@@ -44,10 +41,6 @@ export default function SingleAlgorithmpage() {
             <div className={styles.nextAlgoCard}>Next Algo</div>
         </div>
     </div>
-
-
     </>
-
-
   )
 }
