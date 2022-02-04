@@ -1,4 +1,3 @@
-import users from './usersRoutes.js'
+import users from "./usersRoutes.js";
 
-export {users} 
-
+export { users };

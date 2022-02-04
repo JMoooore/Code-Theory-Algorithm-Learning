@@ -1,12 +1,12 @@
-import connection from './db/connection.js';
+import connection from "./db/connection.js";
 
 export default {
-    client: 'pg',
-    connection: connection.string ?? connection.object,
-    migrations: {
-        directory: 'db/migrations',
-    },
-    seeds: {
-        directory: 'db/seeds',
-    },
+  client: "pg",
+  connection: connection.string ?? connection.object,
+  migrations: {
+    directory: "db/migrations",
+  },
+  seeds: {
+    directory: "db/seeds",
+  },
 };
