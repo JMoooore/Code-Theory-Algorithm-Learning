@@ -1,3 +1,6 @@
-import users from "./usersRoutes.js";
+import users from './usersRoutes.js'
+import comments from './commentsRoutes.js'
+
+export {users, comments} 
 
 export { users };
