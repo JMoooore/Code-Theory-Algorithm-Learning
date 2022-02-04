@@ -5,10 +5,15 @@ import styles from '../styles/comment.module.css'
 
 export default function CommentItem(props) {
   return (
-    <div className={styles.commentItem}>
-      <div className={styles.commentPhoto}></div>
-      <div className={styles.commentName}> Mike Jones </div>
-      <div className={styles.commentText}>This is such a great algorithm</div>
-    </div>
+    <li className={styles.commentItem}>
+        <div className={styles.commentPhotoContainer}>
+            <img className={styles.commentPhoto} alt=''/>
+        </div>
+        <div className={styles.commentInfo}>
+            <p className={styles.commentName}>Anie Silverston</p>
+            <span className={styles.commentTime}>4 hours ago</span>
+        </div>
+        <p className={styles.commentText}>Suspendisse gravida sem?</p>
+    </li>
   )
 }

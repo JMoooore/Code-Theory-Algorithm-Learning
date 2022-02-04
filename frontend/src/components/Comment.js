@@ -6,15 +6,12 @@ import CommentItem from './CommentItem';
 
 export default function Comment(props){
   return (
-    <div className={styles.commentContainer}>
-      <div className={styles.commentTitle}>
-        <h1>Comments</h1>
-      </div>
-
-      <div className={styles.commentBody}>
-        <CommentItem />
-      </div>
-
-    </div>
+    <ul className={styles.commentContainer}>
+      <h1 className={styles.commentTitle}>Comments</h1>
+      <CommentItem />
+      <CommentItem />
+      <CommentItem />
+      <CommentItem />
+    </ul>
   )
 }
