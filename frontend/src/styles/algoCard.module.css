@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap%27');
+
+* {
+    padding: 0;
+    margin: 0;
+    --dark: #043034 ;  /*green*/
+    --highlight: #e7d49e; /*lighter yellow */
+    --light: #ccc5b9;
+    --mid: #d8ae5e; /*dark yellow*/
+    --white: #fffcf2;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.cardDiv{
+    display: flex;
+}
+
+.cardMain{
+    background-color: var(--dark);
+    border: 3px solid var(--mid);
+    transition: transform .5s ease;
+}
+
+.cardMain:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.cardTitle{
+    color: var(--mid);
+    text-align: center;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+}
+
+.cardDescDiv{
+    display: flex;
+    background-color: var(--light);
+    width: 30vw;
+    margin-left: 1rem;
+}
+
+.cardDesc{
+    text-align: left;
+    margin: .5rem;
+}
+
+.thumbnail{
+    width: 100px;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
