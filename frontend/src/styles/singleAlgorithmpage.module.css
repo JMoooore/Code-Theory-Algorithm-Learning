@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+*{
+    --dark: #043034 ;  /*green*/
+    --highlight: #e7d49e; /*lighter yellow */
+    --light: #ccc5b9;
+    --mid: #d8ae5e; /*dark yellow*/
+    --white: #fffcf2;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--highlight);
+}
+
+.animationContainer {
+    background-color: var(--highlight);
+    height: 70vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animationCard{
+    margin-top: 2rem;
+    background-color: var(--dark);
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 10px solid var(--mid);
+    color: var(--mid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animationItem{
+    margin-top: 1rem;
+    background-color: var(--highlight);
+    height: 80%;
+    width: 95%;
+    border-radius: 5px;
+    color: var(--dark);
+}
+.animationControls{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--mid);
+    height: 10%;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.descriptionContainer{
+    height: 50vh;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descriptionCard{
+    margin-top: 2rem;
+    background-color: var(--dark);
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 10px solid var(--mid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descriptionTitle{
+    margin-top: 1rem;
+    font-size: 15px;
+    color: var(--mid);
+    
+}
+
+.descriptionBody {
+    margin-top: 1rem;
+    width: 80%;
+    color: var(--highlight);
+    overflow: scroll;
+}
+
+.codeContainer{
+    height: 50vh;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.codeCard{
+    margin-top: 2rem;
+    background-color: var(--dark);
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 10px solid var(--mid);
+    color: var(--mid);
+}
+
+.commentsContainer{
+    height: 60vh;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.commentsCard{
+    margin-top: 2rem;
+    background-color: var(--dark);
+    width: 90%;
+    height: 85%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 10px solid var(--mid);
+    color: var(--mid);
+}
+
+.nextAlgoContainer{
+    height: 60vh;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nextAlgoCard{
+    margin-top: 2rem;
+    background-color: var(--dark);
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 10px solid var(--mid);
+    color: var(--mid);
+}
