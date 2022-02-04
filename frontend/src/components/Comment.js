@@ -22,8 +22,15 @@ export default function Comment(props){
         >Submit Comment</button>
       </form>
       {props.comments.map(e => {
+<<<<<<< HEAD
         return <CommentItem key={e.id} comment={e} user={props.users.filter((a) => {
           return a.id === e.user_id ? a : null;
+=======
+        return <CommentItem comment={e} user={props.users.filter(a => {
+          if(a.id === e.user_id) {
+            return a;
+          }
+>>>>>>> afe944b (Error on matching dummy user to dummy comment)
           })}/>
       })}
     </ul>
