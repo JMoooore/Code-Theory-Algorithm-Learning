@@ -4,15 +4,12 @@ import express from 'express';
 import * as routes from './routes/index.js';
 
 const app = express();
-const PORT = process.env.PORT || 3001;
-
 const corsConfig = {
     origin: 'http://localhost:3000',
 };
-
 app.use(cors(corsConfig));
-
-app.use('/users', routes.users);
+const PORT = process.env.PORT || 3001;
+app.use(express.json());
 
 app.listen(PORT, () => {
     console.log(`server running on port: ${PORT}`);
