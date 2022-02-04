@@ -2,16 +2,18 @@ import React from "react"
 import styles from '../styles/comment.module.css'
 
 export default function CommentItem(props) {
+
   return (
     <li className={styles.commentItem}>
+    {console.log(props.users)}
         <div className={styles.commentPhotoContainer}>
             <img className={styles.commentPhoto} alt=''/> {/*props.user.user_photo */}
         </div>
         <div className={styles.commentInfo}>
-            <p className={styles.commentName}>Anie Silverston {/* props.user.first_name, props.user.last_name[0] */}</p>
-            <span className={styles.commentTime}>4 hours ago {/* props.comment.created_at */}</span>
+            <p className={styles.commentName}>{props.user.first_name, props.user.last_name}</p>
+            <span className={styles.commentTime}>{props.comment.created_at}</span>
         </div>
-        <p className={styles.commentText}>{/* props.comment.content */}</p>
+        <p className={styles.commentText}>{props.comment.content}</p>
     </li>
   )
 }
