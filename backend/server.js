@@ -3,6 +3,8 @@ dotenv.config()
 import cors from 'cors'
 import express from 'express'
 import * as routes from './routes/index.js'
+
+
 const app = express()
 const corsConfig = {
     origin: 'http://localhost:3000'
