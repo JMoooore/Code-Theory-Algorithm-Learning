@@ -11,7 +11,9 @@ const corsConfig = {
 };
 
 app.use(cors(corsConfig));
-app.use(express.json());
+
+app.use("/users", routes.users);
+app.use("/comments", routes.comments);
 
 app.listen(PORT, () => {
   console.log(`server running on port: ${PORT}`);
