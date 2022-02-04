@@ -11,6 +11,8 @@ app.use(cors(corsConfig))
 const PORT = process.env.PORT || 3001
 app.use(express.json())
 
+app.use('/users',routes.users)
+
 app.listen(PORT, ()=>{
     console.log(`server running on port: ${PORT}`)
 })
