@@ -6,7 +6,9 @@ export default function AllAlgos() {
   return (
       <>
         <div className={styles.backgroundAllAlgos}>
-        <AlgoCard/>
+          <div className={styles.allCards}>
+            <AlgoCard/>
+          </div>
         </div>
       </>  
   )

@@ -12,3 +12,10 @@
     background-color: var(--highlight);
     height: 90vh;
 }
+
+.allCards{
+    display: flex;
+    padding: 4rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

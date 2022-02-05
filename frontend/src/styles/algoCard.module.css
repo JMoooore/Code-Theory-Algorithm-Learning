@@ -13,6 +13,7 @@
 
 .cardDiv{
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .cardMain{
