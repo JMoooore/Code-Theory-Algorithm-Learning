@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from '../styles/allAlgos.module.css'
-import AlgoCard from './AlgoCard';
+import AlgoCard from '../components/AlgoCard';
 
-export default function AllAlgos() {
+export default function AllAlgosPage() {
   return (
       <>
         <div className={styles.backgroundAllAlgos}>
