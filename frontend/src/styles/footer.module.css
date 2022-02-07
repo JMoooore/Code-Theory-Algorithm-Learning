@@ -58,9 +58,9 @@
 
 .footerAuthorList{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     list-style: none;
-    width: 300px;
+    width: 250px;
 }
 
 .footerAuthorItem:hover{
@@ -71,7 +71,8 @@
 .authorsDiv{
     display: flex;
     justify-content: center;
-    width: 290px;
+    width: 250px;
+    padding-left: 20px;
 }
 
 .authorsTitle{
@@ -80,10 +81,8 @@
 }
 
 .footerAuthorItem{
-    margin-left: 10px;
     display: flex;
     justify-content: space-between;
-    width: 70px;
 }
 
 .authorsListDiv{
