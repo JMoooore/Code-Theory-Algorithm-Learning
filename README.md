@@ -1,8 +1,62 @@
 # Frontend Capstone
 
+</br>
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#commands-to-remember">Commands To Remember</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+</br>
 
-## Commands to remember:
+## About The Project
+This application serves as an educational tool for developers and students to visualize how algorithms work. Many people find algorithms a difficult concept to fully understand, especially when current resources are mostly text-based. As a team, we decided to contribute to open source learning with an easy-to-navigate website that allows users the ability to experiment with different algorithms and communicate with other like-minded individuals.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+* [React.js](https://reactjs.org/)
+* [Node.js]()
+* [Express.js]()
+* [PostgreSQL]()
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Getting Started
+</br>
+
+### Prequisites
+Ensure you have the latest version of npm installed
+```sh
+npm install npm@latest -g
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+</br>
+
+### Commands To Remember
+</br>
+
+#### Database Commands:
+```
+cd /backend
+
 # create migration file
 npm run migrate:make [table_name]
 
@@ -13,19 +67,28 @@ npm run migrate
 npx knex seed:make [seed_file_name] --knexfile db/knexfile.js
 
 # run seed files
-npm run userSeed 
-npm run commentSeed
+npm run seed
 
 # rollback migration (so you can reset tables in database and reseed)
 npm run rollback
 ```
+#### Backend Commands:
+```
+cd /backend
+
+# run backend server
+npm run dev
+```
+#### Frontend Commands:
+```
+cd /frontend
+# start React application
+npm start
+```
+<p align="right">(<a href="#top">back to top</a>)</p>
+<br></br>
 
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
 ## Add your files
 
