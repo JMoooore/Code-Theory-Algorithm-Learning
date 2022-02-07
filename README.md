@@ -15,6 +15,9 @@ npx knex seed:make [seed_file_name] --knexfile db/knexfile.js
 # run seed files
 npm run userSeed 
 npm run commentSeed
+
+# rollback migration (so you can reset tables in database and reseed)
+npm run rollback
 ```
 
 
