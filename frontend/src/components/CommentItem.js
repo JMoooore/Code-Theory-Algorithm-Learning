@@ -5,7 +5,7 @@ export default function CommentItem(props) {
 
   return (
     <li className={styles.commentItem}>
-    {console.log(props.users)}
+    {console.log(props.user)}
         <div className={styles.commentPhotoContainer}>
             <img className={styles.commentPhoto} alt=''/> {/*props.user.user_photo */}
         </div>
