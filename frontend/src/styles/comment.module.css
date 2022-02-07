@@ -52,9 +52,14 @@
 .commentPhoto {
   border-radius: 50%;
   background-color: var(--highlight);
-  height: 25px;
-  width: 25px;
+  height: 35px;
+  width: 35px;
   margin-right: 1rem;
+}
+
+.commentInfo {
+  display: flex;
+  flex-direction: column;
 }
 
 .commentName {
@@ -68,5 +73,7 @@
 
 .commentText {
   color: var(--light);
+  align-self: flex-end;
   justify-self: flex-end;
+  /* margin-left: 2rem; */
 }
