@@ -1,0 +1,6 @@
+.container {
+    display:flex;
+}
+.value {
+    margin: 0 .5em;
+}

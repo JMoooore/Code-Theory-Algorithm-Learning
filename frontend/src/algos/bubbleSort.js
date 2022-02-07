@@ -22,10 +22,24 @@ algo.function = function* sort(data) {
             const left = data[i];
             const right = data[i + 1];
 
+            left.color = 'cyan';
+            right.color = 'cyan';
+
+            yield data;
+
             if (left.value > right.value) swap(i, i + 1);
+
+            left.color = null;
+            right.color = null;
+
+            yield data;
         }
+        data[unsortedLength - 1 ].color = 'orange';
         unsortedLength--;
+        yield data;
     }
+    data[0].color = 'orange'
+    yield data
 };
 
-export default algo
+export default algo;
