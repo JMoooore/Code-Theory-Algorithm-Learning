@@ -7,11 +7,10 @@ export default function Header() {
     <>
         <div className={styles.header}>
             <div className={styles.headerLogo}>
-                {/* <Link to='/'><div className={styles.logoImage}></div></Link>  */}
-                <div className={styles.logoImage}></div>
+                <Link to='/'><div className={styles.logoImage}></div></Link> 
                 <div>
                     <ul className={styles.headerList}>
-                        <li className={styles.headerListItem}>Algorithms</li>
+                        <Link to="/algorithms_page"> <li className={styles.headerListItem}>Algorithms</li></Link>
                     </ul>
                 </div>
             </div>
