@@ -49,37 +49,37 @@ const dummyCommentData = [
   {
     id: 1,
     user_id: 1,
-    content: "Some super awesome comment about really cool stuff",
+    content: "Cras quam augue, auctor at faucibus at, tincidunt et massa. Morbi viverra augue nunc, a dignissim elit facilisis mattis. Aliquam ut dignissim nunc.",
     created_at: Date.now()
   },
   {
     id: 2,
     user_id: 2,
-    content: "Some super awesome comment about really cool stuff",
+    content: "Phasellus luctus, nunc in ullamcorper iaculis, purus mauris imperdiet enim, vel euismod lorem turpis vel ligula. Sed id nisi sodales, ullamcorper tellus vel, laoreet purus. Phasellus viverra metus sed nisl efficitur euismod. Nam eu mi vehicula, cursus leo sit amet, eleifend mauris.",
     created_at: Date.now()
   },
   {
     id: 3,
     user_id: 3,
-    content: "Some super awesome comment about really cool stuff",
+    content: "Donec tempor semper arcu, id tempus neque sagittis finibus.",
     created_at: Date.now()
   },
   {
     id: 4,
     user_id: 4,
-    content: "Some super awesome comment about really cool stuff",
+    content: "Sed ultricies convallis fermentum. Cras quam augue, auctor at faucibus at, tincidunt et massa.",
     created_at: Date.now()
   },
   {
     id: 5,
     user_id: 5,
-    content: "Some super awesome comment about really cool stuff",
+    content: "Pellentesque sed lobortis dolor. Nulla ut ante volutpat sapien efficitur condimentum. Aenean volutpat gravida cursus. Cras sit amet lobortis augue.",
     created_at: Date.now()
   },
   {
     id: 6,
     user_id: 6,
-    content: "Some super awesome comment about really cool stuff",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel dolor tincidunt, hendrerit enim at, imperdiet dui. Nullam porta eleifend bibendum.  Morbi viverra augue nunc, a dignissim elit facilisis mattis. Aliquam ut dignissim nunc.  ",
     created_at: Date.now()
   },
 ]
