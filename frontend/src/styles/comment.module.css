@@ -8,6 +8,7 @@
   --white: #fffcf2;
 }
 
+/* Comment component */
 .commentContainer {
   display: flex;
   flex-direction: column;
@@ -35,11 +36,22 @@
   font-size: 3rem;
 }
 
-.commentBody {
-  color: var(--mid);
+.commentForm {
   display: flex;
+  margin-bottom: 1rem;
 }
 
+.addCommentTextarea {
+  width: 80%;
+  resize: none;
+}
+
+.addCommentButton {
+  padding: .5rem;
+  margin-left: .2rem;
+}
+
+/* CommentItem Component */
 .commentItem {
   display: flex;
   margin-bottom: 1rem;
@@ -60,11 +72,12 @@
 .commentInfo {
   display: flex;
   flex-direction: column;
+  margin-right: 1.5rem;
 }
 
 .commentName {
   color: var(--mid);
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
 }
 
 .commentTime {
@@ -75,5 +88,4 @@
   color: var(--light);
   align-self: flex-end;
   justify-self: flex-end;
-  /* margin-left: 2rem; */
 }
