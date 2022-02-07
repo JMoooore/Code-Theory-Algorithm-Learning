@@ -10,11 +10,7 @@ export default function CommentItem(props) {
             <img className={styles.commentPhoto} alt=''/> {/*props.user.user_photo */}
         </div>
         <div className={styles.commentInfo}>
-<<<<<<< HEAD
             <p className={styles.commentName}>{props.user[0].first_name} {props.user[0].last_name[0]}.</p>
-=======
-            <p className={styles.commentName}>{props.user.first_name, props.user.last_name}</p>
->>>>>>> afe944b (Error on matching dummy user to dummy comment)
             <span className={styles.commentTime}>{props.comment.created_at}</span>
         </div>
         <p className={styles.commentText}>{props.comment.content}</p>
