@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+    margin: 0 1px;
+}
+.stick {
+    border: 1px solid black;
+    width: 1em;
+    border-radius: 3px;
+}
+
+.value {
+    font-size: 1em;
+}
+
+

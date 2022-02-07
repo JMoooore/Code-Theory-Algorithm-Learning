@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+
+.board {
+    display: flex;
+    align-items: end;
+    height: 300px;
+}
+.controls {
+    margin: 10px;
+}
