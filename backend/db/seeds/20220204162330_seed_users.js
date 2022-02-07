@@ -3,6 +3,7 @@
  * @returns { Promise<void> }
  */
 export function seed(knex) {
+  
   // Deletes ALL existing entries
   return knex("users")
     .del()

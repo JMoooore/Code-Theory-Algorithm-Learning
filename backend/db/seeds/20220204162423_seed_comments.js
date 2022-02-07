@@ -5,15 +5,15 @@
 export function seed(knex) {
   // Deletes ALL existing entries
   return knex("comments")
-    .del()
+    .truncate()
     .then(function () {
       // Inserts seed entries
       return knex("comments").insert([
-        { content: "Great stuff" },
-        { content: "Not cool" },
-        { content: "Working" },
-        { content: "Test" },
-        { content: "Go Lions" },
+        { user_id: 1, content: "Great stuff"},
+        { user_id: 2, content: "Not cool"},
+        { user_id: 1, content: "Working"},
+        { user_id: 1, content: "Test"},
+        { user_id: 1, content: "Go Lions"},
       ]);
     });
 }
