@@ -57,9 +57,11 @@ This application serves as an educational tool for developers and students to vi
 * [PostgreSQL]()
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Badges
+<p align="right">(<a href="#top">back to top</a>)</p>
+</br>
 
 ### Visuals
-[![Application Screen Shot][product-screenshot]](https://example.com)
 <p align="right">(<a href="#top">back to top</a>)</p>
 </br>
 
