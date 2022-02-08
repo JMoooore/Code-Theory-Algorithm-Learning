@@ -17,10 +17,12 @@ const SortingVisualizer = props => {
     const [data, setData] = useState(parseNodes(randomData(45, 5, 99)));
     const [dataSize, setDataSize] = useState(45);
     const [sizedData, setSizedData] = useState(data);
-    const [iter, setIter] = useState();
     const [sorting, setSorting] = useState(false);
 
-    let algoSpeed = useRef(1);
+    let algoSpeed = useRef(20);
+    let frames = useRef();
+    let frameIndex = useRef(0);
+    let playing = useRef(false);
 
     const resizeData = () => {
         if (sorting) return;
@@ -31,29 +33,54 @@ const SortingVisualizer = props => {
     const randomizeData = () => {
         const newData = randomData(45, 5, 99);
         const newNodeData = parseNodes(newData);
-        setIter();
+        frames.current = null;
         setData([...newNodeData]);
     };
 
-    const sort = async iter => {
-        setSorting(true);
-        for (let data of iter) {
-            await sleep(1000 / algoSpeed.current);
-            setSizedData([...data]);
+    const generateFrames = data => {
+        const newIter = algorithm.function(data);
+
+        const frames = [];
+
+        for (let data of newIter) {
+            frames.push([...data]);
         }
-        setIter()
-        setSorting(false);
+        return frames;
     };
 
-    const handleSort = e => {
-        if (sorting) return;
-        let algoIter = iter;
-        if (!algoIter) {
-            const newIter = algorithm.function(sizedData);
-            setIter(newIter);
-            algoIter = newIter;
+    const handlePause = () => (playing.current = false);
+    const handlePlay = async () => {
+        if (playing.current) return;
+        playing.current = true;
+
+        if (!frames.current) {
+            frames.current = generateFrames(sizedData);
         }
-        sort(algoIter);
+
+        while (frameIndex.current < frames.current.length && playing.current) {
+            await sleep(10);
+            setSizedData(frames.current[frameIndex.current]);
+            frameIndex.current += 1;
+        }
+        playing.current = false;
+    };
+    const handleForward = () => {
+        if (!frames.current) frames.current = generateFrames(sizedData);
+        if (playing.current) return;
+        if(frameIndex.current === 0){
+            setSizedData(frames.current[frameIndex.current]);
+            frameIndex.current += 1;
+            return
+        }
+        frameIndex.current += 1;
+        setSizedData(frames.current[frameIndex.current]);
+    };
+
+    const handleBackward = () => {
+        if (playing.current) return;
+        if (frameIndex.current === 0) return;
+        frameIndex.current -= 1;
+        setSizedData(frames.current[frameIndex.current]);
     };
 
     useEffect(() => resizeData(), [data, dataSize]);
@@ -85,12 +112,13 @@ const SortingVisualizer = props => {
                     min={10}
                     disabled={sorting}
                 />
-                <button onClick={handleSort} disabled={sorting}>
-                    Sort!
-                </button>
-                <button onClick={randomizeData} disabled={sorting}>
+                <button onClick={randomizeData} disabled={sorting.current}>
                     RandomizeData
                 </button>
+                <button onClick={handlePause}>Pause</button>
+                <button onClick={handlePlay}>Play</button>
+                <button onClick={handleForward}>Forward</button>
+                <button onClick={handleBackward}>Backward</button>
             </div>
         </div>
     );
