@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from '../styles/footer.module.css'
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
       <>
         <div className={styles.footer}>
             <div className={styles.footerLogo}>
-                {/* <Link to='/'><div className={styles.logoImage}></div></Link>  */}
-                <div className={styles.logoImage}></div>
+                <Link to='/'><div className={styles.logoImage}></div></Link> 
                 <div className={styles.authorsDiv}>
                 <div className={styles.authorsTitle}>Authors</div>
                 <div className={styles.authorsListDiv}>
