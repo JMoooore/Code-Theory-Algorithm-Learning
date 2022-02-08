@@ -5,8 +5,8 @@
 [![Forks][forks-shield]][forks-url] 
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Git last commit][last-commit]]()
+[![Git last commit][last-commit]][last-commit-url]
+<!-- [![MIT License][license-shield]][license-url] -->
 
 </div>
 
@@ -25,7 +25,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        <li><a href="#visuals">Visuals</a></li>
+        <!-- <li><a href="#visuals">Visuals</a></li> -->
       </ul>
     </li>
     <li>
@@ -58,10 +58,10 @@ This application serves as an educational tool for developers and students to vi
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Visuals
+<!-- ### Visuals
 [![Application Screen Shot][product-screenshot]](https://example.com)
 <p align="right">(<a href="#top">back to top</a>)</p>
-</br>
+</br> -->
 
 ## Getting Started
 </br>
@@ -143,9 +143,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch:  `git checkout -b feature/AmazingFeature`
+3. Commit your Changes:  `git commit -m 'Add some AmazingFeature'`
+4. Push to the Branch: `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -161,12 +161,17 @@ Project Link: [https://gitlab.com/m7093/frontend-capstone](https://gitlab.com/m7
 
 ### Empathetic Lions 
 #### Core Team
-* [Fernando Curiel-Moysen](https://www.linkedin.com/in/fernando-curiel-moysen/)
-* [Paul Devlin](https://www.linkedin.com/in/pmdevlin/)
-* [Kevin Heleodoro](https://www.linkedin.com/in/kevin-heleodoro/)
-* [John "Hank" Moore](https://www.linkedin.com/in/john-ht-moore/)
-* [Isaias Nuno](https://www.linkedin.com/in/isaias-nuno-galindo/)
-* [Nicholas Rafaelle](https://www.linkedin.com/in/nick-raffaele/)
+> [Fernando Curiel-Moysen](https://www.linkedin.com/in/fernando-curiel-moysen/)
+
+> [Paul Devlin](https://www.linkedin.com/in/pmdevlin/)
+
+> [Kevin Heleodoro](https://www.linkedin.com/in/kevin-heleodoro/)
+
+> [John "Hank" Moore](https://www.linkedin.com/in/john-ht-moore/)
+
+> [Isaias Nuno](https://www.linkedin.com/in/isaias-nuno-galindo/)
+
+> [Nicholas Rafaelle](https://www.linkedin.com/in/nick-raffaele/)
 
 ### Resources
 * [Best README template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
@@ -179,15 +184,17 @@ Project Link: [https://gitlab.com/m7093/frontend-capstone](https://gitlab.com/m7
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://gitlab.com/m7093/frontend-capstone/-/graphs/main 
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://gitlab.com/m7093/frontend-capstone/-/forks 
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://gitlab.com/m7093/frontend-capstone/-/starrers 
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://gitlab.com/m7093/frontend-capstone/-/issues 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[last-commit]: https://img.shields.io/github/last-commit/google/skia.svg?style=for-the-badge
+[last-commit-url]: https://gitlab.com/m7093/frontend-capstone/-/commits/main 
+
 [product-screenshot]: images/screenshot.png
-[last-commit]: https://img.shields.io/github/last-commit/google/skia.svg?style=flat
