@@ -2,7 +2,7 @@ const algo = {};
 
 algo.name = 'bubbleSort';
 
-algo.desciption =
+algo.description =
     'Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.';
 
 algo.function = function* sort(data) {
