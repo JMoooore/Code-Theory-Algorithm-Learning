@@ -1,13 +1,31 @@
 # Frontend Capstone
+<div align=center>
+
+[![Contributors][contributors-shield]][contributors-url] 
+[![Forks][forks-shield]][forks-url] 
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Git last commit][last-commit]]()
+
+</div>
+
+<div align=center>
+<a href="https://gitlab.com/m7093/frontend-capstone">
+    <img src="./frontend/src/images/empathetic_lions.jpg" alt="Logo" width="200" height="150">
+  </a>
+</div>
+
 
 </br>
 <details>
-  <summary>Table of Contents</summary>
+  <summary><b>Table of Contents</b></summary>
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#visuals">Visuals</a></li>
       </ul>
     </li>
     <li>
@@ -39,11 +57,9 @@ This application serves as an educational tool for developers and students to vi
 * [PostgreSQL]()
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Badges
-<p align="right">(<a href="#top">back to top</a>)</p>
-</br>
 
 ### Visuals
+[![Application Screen Shot][product-screenshot]](https://example.com)
 <p align="right">(<a href="#top">back to top</a>)</p>
 </br>
 
@@ -73,7 +89,7 @@ npm install npm@latest -g
 </br>
 
 #### Database Commands:
-```
+```sh
 cd /backend
 
 # create migration file
@@ -92,14 +108,14 @@ npm run seed
 npm run rollback
 ```
 #### Backend Commands:
-```
+```sh
 cd /backend
 
 # run backend server
 npm run dev
 ```
 #### Frontend Commands:
-```
+```sh
 cd /frontend
 # start React application
 npm start
@@ -155,3 +171,23 @@ Project Link: [https://gitlab.com/m7093/frontend-capstone](https://gitlab.com/m7
 ### Resources
 * [Best README template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[product-screenshot]: images/screenshot.png
+[last-commit]: https://img.shields.io/github/last-commit/google/skia.svg?style=flat
