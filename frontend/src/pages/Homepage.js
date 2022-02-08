@@ -11,7 +11,7 @@ export default function Homepage() {
         <p className={styles.mainBody}>"The most recommended site to visualize algorithms"</p>
         </div>
     </div>
-
+    <div className={styles.homeContainer}>
     <div className={styles.homeAdditional}>
             <h1 className={styles.homeAdditionalTitle}>For Your Information</h1>
         <div className={styles.containerM}>
@@ -30,6 +30,7 @@ export default function Homepage() {
         
         <div className={styles.homeAdditionalTwoImage}></div>  
     </div>
+    
 
     <div className={styles.homeAdditional}>
             <h1 className={styles.homeAdditionalTitle}>Learn and Explore!</h1>
@@ -40,7 +41,7 @@ export default function Homepage() {
             </div>
          </div>
      </div>
-
+     </div>
     </>
   )
 }
