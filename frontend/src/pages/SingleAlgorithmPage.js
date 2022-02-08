@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../styles/singleAlgorithmpage.module.css'
+import styles from '../styles/singleAlgorithmPage.module.css'
 
-export default function SingleAlgorithmpage(props) {
+export default function SingleAlgorithmPage(props) {
   const {algorithm} = props
   return (
     <>
