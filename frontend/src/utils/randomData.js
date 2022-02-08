@@ -1,5 +1,5 @@
 import randomBetween from './randomBetween.js';
-export default function randomData(size, min, max) {
+export function randomData(size, min, max) {
     const result = [];
 
     for (let i = 0; i < size; i++) {
@@ -7,4 +7,11 @@ export default function randomData(size, min, max) {
         result.push(randNum);
     }
     return result;
+}
+
+export function randomNodes(size,min,max){
+    return randomData(size,min,max).map((value) => {
+        return {value}
+    })
+
 }

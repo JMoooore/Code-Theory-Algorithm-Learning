@@ -1,6 +1,9 @@
 import bubbleImage from '../images/bubble_img.svg'
 import deepCopy from '../utils/deepCopy.js';
 
+const ACTIVE_COLOR = 'dodgerblue'
+const SORTED_COLOR = '#d8ae5e'
+
 const algo = {};
 
 algo.name = 'Bubble Sort';
@@ -24,8 +27,8 @@ algo.function = function* sort(data) {
             let left = data[i];
             let right = data[i + 1];
 
-            left.color = 'cyan';
-            right.color = 'cyan';
+            left.color = ACTIVE_COLOR;
+            right.color = ACTIVE_COLOR;
 
             yield deepCopy(data);
 
@@ -34,11 +37,11 @@ algo.function = function* sort(data) {
             left.color = null;
             right.color = null;
         }
-        data[unsortedLength - 1].color = 'orange';
+        data[unsortedLength - 1].color = SORTED_COLOR;
         unsortedLength--;
         yield deepCopy(data);
     }
-    data[0].color = 'orange';
+    data[0].color = SORTED_COLOR;
     yield deepCopy(data);
 };
 
