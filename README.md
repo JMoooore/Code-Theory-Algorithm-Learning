@@ -1,8 +1,97 @@
 # Frontend Capstone
+<div align=center>
+
+[![Contributors][contributors-shield]][contributors-url] 
+[![Forks][forks-shield]][forks-url] 
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![Git last commit][last-commit]]()
+
+</div>
+
+<div align=center>
+<a href="https://gitlab.com/m7093/frontend-capstone">
+    <img src="./frontend/src/images/empathetic_lions.jpg" alt="Logo" width="200" height="150">
+  </a>
+</div>
 
 
-## Commands to remember:
+</br>
+<details>
+  <summary><b>Table of Contents</b></summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#visuals">Visuals</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#commands-to-remember">Commands To Remember</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+</br>
+
+## About The Project
+This application serves as an educational tool for developers and students to visualize how algorithms work. Many people find algorithms a difficult concept to fully understand, especially when current resources are mostly text-based. As a team, we decided to contribute to open source learning with an easy-to-navigate website that allows users the ability to experiment with different algorithms and communicate with other like-minded individuals.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+* [React.js](https://reactjs.org/)
+* [Node.js]()
+* [Express.js]()
+* [PostgreSQL]()
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Visuals
+[![Application Screen Shot][product-screenshot]](https://example.com)
+<p align="right">(<a href="#top">back to top</a>)</p>
+</br>
+
+## Getting Started
+</br>
+
+### Prequisites
+Ensure you have the latest version of npm installed
+```sh
+npm install npm@latest -g
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Installation
+1. Clone the repo
+   ```sh
+   git clone https://gitlab.com/m7093/frontend-capstone 
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Commands To Remember
+</br>
+
+#### Database Commands:
+```sh
+cd /backend
+
 # create migration file
 npm run migrate:make [table_name]
 
@@ -13,99 +102,92 @@ npm run migrate
 npx knex seed:make [seed_file_name] --knexfile db/knexfile.js
 
 # run seed files
-npm run userSeed 
-npm run commentSeed
+npm run seed
 
 # rollback migration (so you can reset tables in database and reseed)
 npm run rollback
 ```
+#### Backend Commands:
+```sh
+cd /backend
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
+# run backend server
+npm run dev
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/m7093/frontend-capstone.git
-git branch -M main
-git push -uf origin main
+#### Frontend Commands:
+```sh
+cd /frontend
+# start React application
+npm start
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/m7093/frontend-capstone/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+* Study Guide
+* Algorithm Familiarization
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- [x] Create all necessary components
+- [ ] User authentication
+- [ ] Add additional algorithms
+- [ ] Mobile-friendly design
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+Any contributions you make are **greatly appreciated**.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## License
-For open source projects, say how it is licensed.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Contact
+Project Link: [https://gitlab.com/m7093/frontend-capstone](https://gitlab.com/m7093/frontend-capstone)
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Acknowledgements
+</br>
+
+### Empathetic Lions 
+#### Core Team
+* [Fernando Curiel-Moysen](https://www.linkedin.com/in/fernando-curiel-moysen/)
+* [Paul Devlin](https://www.linkedin.com/in/pmdevlin/)
+* [Kevin Heleodoro](https://www.linkedin.com/in/kevin-heleodoro/)
+* [John "Hank" Moore](https://www.linkedin.com/in/john-ht-moore/)
+* [Isaias Nuno](https://www.linkedin.com/in/isaias-nuno-galindo/)
+* [Nicholas Rafaelle](https://www.linkedin.com/in/nick-raffaele/)
+
+### Resources
+* [Best README template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[product-screenshot]: images/screenshot.png
+[last-commit]: https://img.shields.io/github/last-commit/google/skia.svg?style=flat
