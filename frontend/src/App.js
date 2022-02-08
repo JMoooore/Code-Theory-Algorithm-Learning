@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Homepage from './pages/Homepage';
@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Routes ,Route} from "react-router-dom";
 
 function App() {
 
+  const [singleAlgo, setSingleAlgo] = useState(null)
+
   return (
     <Router>      
       <div className="App">
@@ -17,8 +19,8 @@ function App() {
         
           <Routes>
           
-            <Route path="/algorithms_page" element={<AllAlgosPage />} />
-            <Route path="/single_algo" element={<SingleAlgorithmPage />} />
+            <Route path="/algorithms_page" element={<AllAlgosPage setSingleAlgo={setSingleAlgo}/>} />
+            <Route path="/single_algo" element={<SingleAlgorithmPage singleAlgo={singleAlgo}/>} />
             <Route path="/" element={<Homepage />} />
 
           </Routes>
