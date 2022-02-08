@@ -17,8 +17,8 @@
 }
 
 .cardMain{
-    background-color: var(--dark);
-    border: 3px solid var(--mid);
+    /* background-color: var(--light); */
+    /* border: 3px solid var(--mid); */
     transition: transform .5s ease;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .cardTitle{
-    color: var(--mid);
+    color: var(--dark);
     text-align: center;
     padding-bottom: .5rem;
     padding-top: .5rem;
