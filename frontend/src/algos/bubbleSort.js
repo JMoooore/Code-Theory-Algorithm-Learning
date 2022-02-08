@@ -21,9 +21,12 @@ algo.function = function* sort(data) {
         for (let i = 0; i < unsortedLength - 1; i++) {
             const left = data[i];
             const right = data[i + 1];
-
+            
             left.color = 'cyan';
             right.color = 'cyan';
+
+            left.scale= 1.1
+            right.scale= 1.1
 
             yield data;
 
@@ -31,8 +34,8 @@ algo.function = function* sort(data) {
 
             left.color = null;
             right.color = null;
-
-            yield data;
+            left.scale= 1
+            right.scale= 1
         }
         data[unsortedLength - 1 ].color = 'orange';
         unsortedLength--;

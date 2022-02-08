@@ -6,7 +6,10 @@ const Node = props => {
             <p className={styles.value}>{value}</p>
             <div
                 className={styles.stick}
-                style={{ height: value * 2.5, backgroundColor: color ?? 'white'  }}
+                style={{
+                    height: value * 2.5,
+                    backgroundColor: color ?? 'white',
+                }}
             ></div>
         </div>
     );
