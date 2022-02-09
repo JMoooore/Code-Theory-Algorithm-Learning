@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import styles from '../../styles/Slider.module.css';
+import styles from './styles/Slider.module.css';
 
 const Slider = props => {
     const { initialValue, title } = props;
