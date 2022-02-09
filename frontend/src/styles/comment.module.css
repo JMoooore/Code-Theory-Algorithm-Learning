@@ -14,7 +14,7 @@
     flex-direction: column;
     height: 40rem;
     align-items: center;
-    width: 50%;
+    width: auto;
     background: var(--dark);
     border: 10px solid var(--mid);
     border-radius: 10px;

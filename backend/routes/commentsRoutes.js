@@ -13,15 +13,20 @@ comments.get("/", async (req, res) => {
   }
 });
 
-comments.get("/:id", async (req, res) => {
+comments.get('/:algo', async (req, res) => {
   try {
-    const id = req.params.id;
-    const result = await db("comments").where("id", id);
-    res.json(result);
+    const algo = req.params.algo
+    const result = await db("comments as c")
+    .join("users as u", "u.id", "c.user_id")
+    .select("u.first_name","u.last_name ", "c.content", "c.created_at", "c.id")
+    .orderBy("c.created_at", "desc")
+    .where({algorithm: algo})
+
+    res.json(result)
   } catch (err) {
     errorHandler(err, res);
   }
-});
+})
 
 comments.post("/", async (req, res) => {
   try {

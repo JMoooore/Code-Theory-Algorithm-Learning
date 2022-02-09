@@ -7,7 +7,7 @@ export function up(knex) {
     table.increments("id").primary(); // unique
     table.integer("user_id");
     table.foreign("user_id").references("users.id").onDelete("CASCADE");
-    table.string("content");
+    table.text("content");
     table.string("algorithm")
     table.timestamp("created_at").defaultTo(knex.fn.now());
   });

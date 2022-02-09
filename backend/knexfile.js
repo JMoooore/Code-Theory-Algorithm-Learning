@@ -2,7 +2,7 @@ import connection from "./db/connection.js";
 
 export default {
   client: "pg",
-  connection: connection.string ?? connection.object,
+  connection: connection.object ?? connection.string,
   migrations: {
     directory: "db/migrations",
   },
