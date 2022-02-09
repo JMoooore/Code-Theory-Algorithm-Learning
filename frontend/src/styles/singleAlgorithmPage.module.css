@@ -58,7 +58,7 @@
 }
 
 .descriptionContainer{
-    height: 50vh;
+    height: 70vh;
     width: 50vw;
     text-align: center;
     display: flex;
@@ -94,7 +94,7 @@
 }
 
 .codeContainer{
-    height: 50vh;
+    height: 70vh;
     width: 50vw;
     text-align: center;
     display: flex;
@@ -105,8 +105,8 @@
 .codeCard{
     margin-top: 2rem;
     background-color: var(--dark);
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 90%;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: 10px solid var(--mid);

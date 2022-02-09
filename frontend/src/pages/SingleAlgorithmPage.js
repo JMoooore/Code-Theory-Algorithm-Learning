@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from '../styles/singleAlgorithmPage.module.css'
+import Comment from '../components/Comment';
+import axios from 'axios';
 
 export default function SingleAlgorithmPage(props) {
+  const [comments, setComments] = useState()
   const algorithm = props.singleAlgo
+
+  const getCommentData = () => {
+    axios.get(`http://localhost:3001/comments/${algorithm.name}`)
+    .then(res => {setComments(res.data)})
+    .catch(console.log('whoops'))
+  }
+
+  useEffect(() => getCommentData(),[])
+
   return (
     <>
     <div className={styles.mainContainer}>
@@ -25,14 +37,12 @@ export default function SingleAlgorithmPage(props) {
             
         <div className={styles.codeContainer}>
             <div className={styles.codeCard}>
-                <div></div>
+                <iframe frameBorder="0" width="100%" height="100%" src={algorithm.replitCode}></iframe>
             </div>
         </div>
             
         <div className={styles.commentsContainer}>
-            <div className={styles.commentsCard}>
-                <div></div>
-            </div>
+            {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData}/>}
         </div>
 
         <div className={styles.nextAlgoContainer}>
