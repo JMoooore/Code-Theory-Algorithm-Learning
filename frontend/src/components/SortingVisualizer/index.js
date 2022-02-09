@@ -2,127 +2,142 @@ import { useState, useEffect, useRef } from 'react';
 import styles from '../../styles/SortingVisualizer.module.css';
 import sleep from '../../utils/sleep.js';
 import { randomNodes } from '../../utils/randomData.js';
+import LinkedList from '../../utils/linkedList.js';
 import Node from './Node.js';
 import Board from './Board.js';
 import Slider from './Slider.js';
 
 const SortingVisualizer = props => {
+    const MAX_SIZE = 45;
+    const INITIAL_SIZE = 45;
+    const INITIAL_ALGO_SPEED = 5;
+
     const { algorithm } = props;
 
-    const [data, setData] = useState(randomNodes(45, 5, 99));
-    const [dataSize, setDataSize] = useState(45);
-    let [sizedData, setSizedData] = useState(data);
+    const [data, setData] = useState(randomNodes(MAX_SIZE, 5, 99));
+    const [dataSize, setDataSize] = useState(INITIAL_SIZE);
+    const [nodes, setNodes] = useState(data.slice(0, dataSize));
+    const [frame, setFrame] = useState(nodes);
+    const [frames, setFrames] = useState(new LinkedList());
     const [sorting, setSorting] = useState(false);
+    const [sorted, setSorted] = useState(false);
+    const [playing, setPlaying] = useState(false);
 
-    let algoSpeed = useRef(20);
-    let frames = useRef([]);
-    let frameIndex = useRef(null);
-    let playing = useRef(false);
-
-    const resizeData = () => {
-        if (sorting) return;
-        const resizedData = data.slice(0, dataSize);
-        setSizedData(resizedData);
-    };
-
-    const randomizeData = () => {
-        const newData = randomNodes(45, 5, 99);
-        frames.current = [];
-        frameIndex.current = null;
-        setData([...newData]);
-    };
+    const isPlaying = useRef(false);
+    const algoSpeed = useRef();
 
     const generateFrames = data => {
-        const newIter = algorithm.function(data);
-
-        const frames = [];
-
-        for (let data of newIter) {
-            frames.push([...data]);
+        const newFrames = new LinkedList();
+        const algoIter = algorithm(data);
+        for (let frame of algoIter) {
+            newFrames.append(frame);
         }
-        return frames;
+        setFrames(newFrames);
+        setFrame(newFrames.head);
     };
 
-    const handlePause = () => {
-        playing.current = false
-    };
     const handlePlay = async () => {
-        if (playing.current) return;
-        playing.current = true
-
-        if (frames.current.length === 0) {
-            frames.current = generateFrames(sizedData);
+        if (playing) return;
+        setSorting(true);
+        setPlaying(true);
+        isPlaying.current = true;
+        let currentFrame = frame;
+        while (currentFrame.next && isPlaying.current) {
+            const speed = -100*algoSpeed.current + 1000
+            await sleep(speed);
+            setFrame(prev => {
+                currentFrame = prev.next;
+                return prev.next;
+            });
         }
-        while (frameIndex.current < frames.current.length && playing.current) {
-            await sleep(1);
-            setSizedData(frames.current[frameIndex.current ?? 0]);
-            if(frameIndex.current === frames.current.length - 1) break;
-            frameIndex.current += 1;
-        }
-        playing.current = false
-    };
-    const handleForward = () => {
-        if (frameIndex.current === frames.current.length - 1) return;
-        if (frames.current.length === 0) {
-            frames.current = generateFrames(sizedData);
-        }
-
-        if (playing.current) return;
-
-        if (frameIndex.current === null) {
-            setSizedData(frames.current[0]);
-            frameIndex.current = 0;
-            return;
-        }
-        frameIndex.current += 1;
-        setSizedData(frames.current[frameIndex.current]);
+        setSorting(false);
+        setPlaying(false);
+        isPlaying.current = false;
+        if (!currentFrame.next) setSorted(true);
     };
 
-    const handleBackward = () => {
-        if (playing.current) return;
-        if (frameIndex.current === 0) return;
-        frameIndex.current -= 1;
-        setSizedData(frames.current[frameIndex.current]);
+    const handleNext = () => {
+        setSorting(true);
+        if (!frame.next) return;
+        setFrame(frame.next);
+    };
+    const handlePrevious = () => {
+        if (!frame.previous || frame.previous === frames.head) return;
+        setFrame(frame.previous);
     };
 
-    useEffect(() => resizeData(), [data, dataSize]);
+    const handleReset = () => {
+        const randomData = randomNodes(MAX_SIZE, 5, 99);
+        setData(randomData);
+        setSorting(false);
+        setSorted(false);
+        setPlaying(false);
+    };
+
+    const handlePause = () => (isPlaying.current = false);
+
+    useEffect(() => setNodes(data.slice(0, dataSize)), [data, dataSize]);
+    useEffect(() => generateFrames(nodes), [nodes]);
 
     return (
         <div className={styles.container}>
-            <Board nodeData={sizedData} />
+            <Board nodeData={frame.data} />
             <div className={styles.controls}>
-                <Slider
-                    initialValue={20}
-                    max={100}
-                    min={1}
-                    onChange={value => (algoSpeed.current = value)}
-                    disabled={playing.current}
-                />
+                <button
+                    className={styles.button}
+                    onClick={handleReset}
+                    disabled={playing}
+                >
+                    Reset
+                </button>
                 <Slider
                     onChange={setDataSize}
-                    initialValue={45}
-                    max={data.length}
+                    title="Data Size"
+                    initialValue={INITIAL_SIZE}
                     min={10}
-                    disabled={playing.current}
+                    max={MAX_SIZE}
+                    disabled={sorting || sorted}
                 />
-                <button onClick={randomizeData} disabled={playing.current}>
-                    RandomizeData
-                </button>
-                <button onClick={handlePause}>Pause</button>
-                <button onClick={handlePlay} disabled={playing.current}>Play</button>
+                <Slider
+                    onChange={value => (algoSpeed.current = value)}
+                    title="Speed"
+                    initialValue={INITIAL_ALGO_SPEED}
+                    min={1}
+                    max={10}
+                    disabled={sorted}
+                />
+
                 <button
-                    onClick={handleForward}
-                    disabled={frameIndex.current === frames.current.length - 1 || playing.current}
+                    className={styles.button}
+                    onClick={handlePlay}
+                    disabled={playing || sorted}
                 >
-                    Forward
+                    Play
                 </button>
                 <button
-                    onClick={handleBackward}
+                    className={styles.button}
+                    onClick={handlePause}
+                    disabled={!playing}
+                >
+                    Pause
+                </button>
+                <button
+                    className={styles.button}
+                    onClick={handleNext}
+                    disabled={frame === frames.tail || playing}
+                >
+                    Next
+                </button>
+                <button
+                    className={styles.button}
+                    onClick={handlePrevious}
                     disabled={
-                        frameIndex.current === 0 || frameIndex.current === null || playing.current
+                        frame === frames.head ||
+                        frame === frames.head?.next ||
+                        playing
                     }
                 >
-                    Backward
+                    Previous
                 </button>
             </div>
         </div>

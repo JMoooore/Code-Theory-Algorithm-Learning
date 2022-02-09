@@ -9,9 +9,8 @@ export function randomData(size, min, max) {
     return result;
 }
 
-export function randomNodes(size,min,max){
-    return randomData(size,min,max).map((value) => {
-        return {value}
-    })
-
+export function randomNodes(size, min, max) {
+    return randomData(size, min, max).map(value => {
+        return { value };
+    });
 }

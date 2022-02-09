@@ -1,20 +1,21 @@
-import bubbleImage from '../images/bubble_img.svg'
+import bubbleImage from '../images/bubble_img.svg';
 import deepCopy from '../utils/deepCopy.js';
 
-const ACTIVE_COLOR = 'dodgerblue'
-const SORTED_COLOR = '#d8ae5e'
+const ACTIVE_COLOR = 'dodgerblue';
+const SORTED_COLOR = '#d8ae5e';
 
 const algo = {};
 
 algo.name = 'Bubble Sort';
 
-algo.image = bubbleImage
+algo.image = bubbleImage;
 
 algo.description =
     'Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.';
 
 algo.function = function* sort(data) {
-    data = deepCopy(data)
+    data = deepCopy(data);
+    yield deepCopy(data);
     let unsortedLength = data.length;
 
     const swap = (i1, i2) => {
