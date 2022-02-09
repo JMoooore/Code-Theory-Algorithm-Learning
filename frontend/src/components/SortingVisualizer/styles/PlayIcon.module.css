@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0 1em;
+}
+
+.container .icon {
+    cursor: pointer;
+    fill: black
+}

@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-import styles from '../../styles/SortingVisualizer.module.css';
+import styles from './styles/SortingVisualizer.module.css';
 import sleep from '../../utils/sleep.js';
 import { randomNodes } from '../../utils/randomData.js';
 import LinkedList from '../../utils/linkedList.js';
 import Node from './Node.js';
 import Board from './Board.js';
 import Slider from './Slider.js';
+import { PauseIcon, NextIcon, PlayIcon, PreviousIcon } from './icons/index.js';
 
 const SortingVisualizer = props => {
     const MAX_SIZE = 45;
@@ -93,44 +94,24 @@ const SortingVisualizer = props => {
                 >
                     Reset
                 </button>
-                <Slider
-                    onChange={setDataSize}
-                    title="Data Size"
-                    initialValue={INITIAL_SIZE}
-                    min={10}
-                    max={MAX_SIZE}
-                    disabled={sorting || sorted}
-                />
-                <Slider
-                    onChange={value => (algoSpeed.current = value)}
-                    title="Speed"
-                    initialValue={INITIAL_ALGO_SPEED}
-                    min={1}
-                    max={10}
-                    disabled={sorted}
-                />
-
-                <button
-                    className={styles.button}
-                    onClick={handlePlay}
-                    disabled={playing || sorted}
-                >
-                    Play
-                </button>
-                <button
-                    className={styles.button}
-                    onClick={handlePause}
-                    disabled={!playing}
-                >
-                    Pause
-                </button>
-                <button
-                    className={styles.button}
-                    onClick={handleNext}
-                    disabled={frame === frames.tail || playing}
-                >
-                    Next
-                </button>
+                <div className={styles.sliders}>
+                    <Slider
+                        onChange={setDataSize}
+                        title="Size"
+                        initialValue={INITIAL_SIZE}
+                        min={10}
+                        max={MAX_SIZE}
+                        disabled={sorting || sorted}
+                    />
+                    <Slider
+                        onChange={value => (algoSpeed.current = value)}
+                        title="Speed"
+                        initialValue={INITIAL_ALGO_SPEED}
+                        min={1}
+                        max={10}
+                        disabled={sorted}
+                    />
+                </div>
                 <button
                     className={styles.button}
                     onClick={handlePrevious}
@@ -140,7 +121,28 @@ const SortingVisualizer = props => {
                         playing
                     }
                 >
-                    Previous
+                    <PreviousIcon />
+                </button>
+                <button
+                    className={styles.button}
+                    onClick={handlePlay}
+                    disabled={playing || sorted}
+                >
+                    <PlayIcon />
+                </button>
+                <button
+                    className={styles.button}
+                    onClick={handlePause}
+                    disabled={!playing}
+                >
+                    <PauseIcon />
+                </button>
+                <button
+                    className={styles.button}
+                    onClick={handleNext}
+                    disabled={frame === frames.tail || playing}
+                >
+                    <NextIcon />
                 </button>
             </div>
         </div>
