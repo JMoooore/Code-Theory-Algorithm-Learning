@@ -1,0 +1,16 @@
+.container {
+    text-align: center;
+    margin: 0 1px;
+}
+.stick {
+    border: 1px solid black;
+    width: 1em;
+    border-radius: 3px;
+    transition: height 100ms ease;
+}
+
+.value {
+    font-size: .85em;
+}
+
+

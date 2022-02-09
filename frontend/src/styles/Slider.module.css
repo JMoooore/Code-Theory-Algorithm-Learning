@@ -1,0 +1,14 @@
+.container {
+    display:flex;
+}
+
+.input {
+    cursor: grab;
+}
+.value {
+    margin: 0 .5em;
+    width: 1.5em;
+}
+.title {
+    margin: 0 .5em;
+}
