@@ -1,29 +1,112 @@
-.mainImage {
-    background: url('https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+body {
+  --logo-load-time: 400ms;
+  --logo-link-load-time: 500ms;
+  --mainTitle-load-delay: calc(var(--logo-load-time) + var(--logo-link-load-time))
 }
 
-.mainInfo{
+.mainHomeContainer{
+  height: 100vh;
+  width: 100vw;
+}
+
+.mainHomeTitleImg{
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  height: 200px;
+  width: 200px;
+  animation: mainImg-load 1000ms ease-in var(--mainTitle-load-delay);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.mainHome {
+  background-color: var(--dark);
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+
+.mainHome video {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  grid-area: 1 / 1 / 1/ 1;
+  object-fit: cover;
+}
+
+.mainHomeContentWrapper {
+  margin-top: 10rem;
+  grid-area: 1/ 1 / 1/ 1;
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 50vw;
-  margin-left: 3rem;
-  margin-top: 5rem;
+  align-items: center;
 }
 
-.mainTitle {
-    color: var(--mid);
-    font-size: 8rem;
+.mainHomeContent {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  animation: mainTitle-load 1000ms ease-in var(--mainTitle-load-delay);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
 }
 
-.mainBody {
-    color: var(--mid);
-    font-size: 2rem;
+.mainHomeBtn{
+  margin-top: 3rem;
+  align-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 3rem;
+  width: 10rem;
+  background-color: var(--highlight);
+  color: var(--dark);
+  border-radius: 10px;
+  transition: transform .8s ease;
 }
+
+.mainHomeBtn:hover {
+  transform: scale(1.2);
+}
+
+.mainHomeTitleContent{
+  color: var(--mid);
+  font-size: 8rem;
+}
+.mainHomeContent{
+  color: var(--highlight);
+  font-size: 2rem;
+}
+
+@keyframes mainTitle-load {
+  0% {
+    transform: translateY(6rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes mainImg-load {
+  0% {
+    transform: translateY(-6rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 
 .homeContainer {
    display: flex;
@@ -36,6 +119,7 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
+    min-height: 60vh;
     font-size: 1.5rem;
     color: var(--dark);
     background-color: var(--highlight);
@@ -82,41 +166,35 @@
     text-align: center;
     cursor: pointer;
     width: 100%;
-    font-size: 18px;
+    font-size: 2rem;
     border-radius: 10px;
+    transition: font-size .8s ease;
 }
 
-button:hover, a:hover {
-    opacity: 0.7;
-  }
+.btnM:hover {
+    background-color: var(--highlight);
+    color: var(--dark);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
 .homeAdditionalTwo{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    align-content: center;
     height: auto;
-    border-bottom: 2px solid var(--highlight);
     background-color: var(--dark);
 }
 
-.homeAdditionalTwoImage {
-  background: url('https://c.tenor.com/_DOBjnGspYAAAAAC/code-coding.gif') no-repeat center center/cover;
-  width: 50vw;
-  margin: 0;
-  margin-left: 50px;
-  
-}
-
 .homeAdditionalTwoInfo{
-  margin-top: 2.5rem;
-  margin-bottom: 3.5rem;
+  margin: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  font-size: 50px;
   color: var(--mid);
-  text-align: left;
-  width: 45%;
+  width: 100%;
   padding: 2rem;
   text-size-adjust: none;
 }
@@ -127,11 +205,11 @@ button:hover, a:hover {
     flex-direction: column;
     align-items: center;
     align-content: center;
-    font-size: 50px;
+    font-size: 3rem;
     color: var(--mid);
     padding-bottom: 1rem;
 }
 
 .homeAdditionalTwobody {
-  font-size: 30px;
+  font-size: 1.8rem;
 }

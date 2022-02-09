@@ -17,9 +17,7 @@
 }
 
 .cardMain{
-    /* background-color: var(--light); */
-    /* border: 3px solid var(--mid); */
-    transition: transform .5s ease;
+    transition: transform 1s ease;
 }
 
 .cardMain:hover{
@@ -32,23 +30,33 @@
     text-align: center;
     padding-bottom: .5rem;
     padding-top: .5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .cardDescDiv{
     display: flex;
-    background-color: var(--light);
+    background-color: var(--mid);
+    border-radius: 10px;
     width: 30vw;
     margin-left: 1rem;
+    box-shadow: 10px 10px 5px var(--dark);
 }
 
+
+
 .cardDesc{
-    text-align: left;
-    margin: .5rem;
+    text-align: center;
+    margin: .8rem;
+    color: var(--dark);
+    font-size: 1.3rem;
 }
 
 .thumbnail{
-    width: 100px;
+    margin-left: 1.5rem;
     padding-top: .5rem;
     padding-left: .5rem;
     padding-right: .5rem;
+    height: 15rem;
+    width: 15rem;
 }
