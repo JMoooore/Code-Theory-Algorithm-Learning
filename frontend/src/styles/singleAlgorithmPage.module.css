@@ -145,7 +145,7 @@
 
 .nextAlgoCard{
     margin-top: 2rem;
-    background-color: var(--dark);
+    background-color: var(--highlight);
     width: 70%;
     height: 70%;
     border-radius: 10px;
@@ -153,3 +153,5 @@
     border: 10px solid var(--mid);
     color: var(--mid);
 }
+
+
