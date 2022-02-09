@@ -8,7 +8,9 @@
 .value {
     margin: 0 .5em;
     width: 1.5em;
+    text-align: center;
 }
 .title {
     margin: 0 .5em;
+    width: 3em;
 }

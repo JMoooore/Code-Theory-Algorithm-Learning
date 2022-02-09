@@ -1,4 +1,4 @@
-import styles from '../../styles/Node.module.css';
+import styles from './styles/Node.module.css';
 const Node = props => {
     const { value, color } = props;
     return (
