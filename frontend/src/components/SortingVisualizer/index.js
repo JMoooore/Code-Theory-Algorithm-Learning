@@ -43,12 +43,12 @@ const SortingVisualizer = props => {
         isPlaying.current = true;
         let currentFrame = frame;
         while (currentFrame.next && isPlaying.current) {
-            const speed = -100*algoSpeed.current + 1000
-            await sleep(speed);
+            const speed = -100 * algoSpeed.current + 1000;
             setFrame(prev => {
                 currentFrame = prev.next;
                 return prev.next;
             });
+            await sleep(speed);
         }
         setSorting(false);
         setPlaying(false);
@@ -74,7 +74,10 @@ const SortingVisualizer = props => {
         setPlaying(false);
     };
 
-    const handlePause = () => (isPlaying.current = false);
+    const handlePause = () => {
+        isPlaying.current = false;
+        setPlaying(false);
+    };
 
     useEffect(() => setNodes(data.slice(0, dataSize)), [data, dataSize]);
     useEffect(() => generateFrames(nodes), [nodes]);
