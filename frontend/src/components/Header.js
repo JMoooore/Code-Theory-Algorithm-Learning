@@ -6,6 +6,7 @@ export default function Header() {
   return (
     <>
         <div className={styles.header}>
+                
             <div className={styles.headerLogo}>
                 <Link to='/'><div className={styles.logoImage}></div></Link> 
                 <div>
@@ -14,12 +15,8 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
-            <div>
-                <ul className={styles.headerList}>
-                    <li className={styles.headerListItem}>Login</li>
-                    <li className={styles.headerListItem}>Sign up</li>
-                </ul>
-            </div>
+            <div className={styles.headerLoginLink}>Login</div>
+
         </div>
     </>
 )}
