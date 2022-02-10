@@ -1,0 +1,66 @@
+
+.mainLoginPageContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--highlight);
+    height: 100vh;
+}
+
+.loginWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    background-color: var(--dark);
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 10px solid var(--mid);
+    color: var(--highlight);
+    
+}
+
+.loginTitle{
+    margin-top: 2rem;
+    font-size: 100px;
+    color: var(--mid);
+}
+
+
+::placeholder {
+    color: var(--highlight);
+  }
+
+
+.loginBtn{
+    margin-left: 2rem;
+    margin-top: 3rem;
+    align-content: center;
+    align-items: center;
+    font-size: 25px;
+    height: 3rem;
+    width: 10rem;
+    background-color: var(--highlight);
+    color: var(--dark);
+    border-radius: 5px;
+}
+
+input[type=text] {
+    padding: 10px;
+    margin:10px 0;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+input[type=password] {
+    padding: 10px;
+    margin:10px 0;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    font-size: 20px;
+  }
