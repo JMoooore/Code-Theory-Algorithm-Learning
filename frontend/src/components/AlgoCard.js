@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from '../styles/algoCard.module.css'
 
 export default function AlgoCard(props) {
-    const {name, image, description} = props.algorithm
+    const {name, image, description, routeName} = props.algorithm
     const setSingleAlgo = props.setSingleAlgo
     const [isShown, setIsShown] = useState(false);
     
@@ -13,7 +13,7 @@ export default function AlgoCard(props) {
     <div className={styles.cardMain} 
     onMouseEnter={() => setIsShown(true)}
     onMouseLeave={() => setIsShown(false)}>
-        <Link to="/single_algo"><img className={styles.thumbnail} src={image} onClick={() => setSingleAlgo(props.algorithm)}/></Link>
+        <Link to={`/algorithms/${routeName}`}><img className={styles.thumbnail} src={image}/></Link>
         <div className={styles.cardTitle}>{name}</div>
         {isShown && (
         <div className={styles.cardDescDiv}>
