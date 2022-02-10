@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 
-*{
-    --dark: #043034 ;  /*green*/
+* {
+    --dark: #043034; /*green*/
     --highlight: #e7d49e; /*lighter yellow */
     --light: #ccc5b9;
     --mid: #d8ae5e; /*dark yellow*/
     --white: #fffcf2;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
 }
 
 .mainContainer {
@@ -25,25 +25,19 @@
     border: 10px solid var(--mid);
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 2rem;
     padding: 3rem;
 }
 
-
-.descriptionContainer{
-    height: 70vh;
-    width: 50vw;
+.descriptionContainer {
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.descriptionCard{
-    margin-top: 2rem;
+.descriptionCard {
     background-color: var(--dark);
-    width: 80%;
-    height: 80%;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: 10px solid var(--mid);
@@ -52,77 +46,59 @@
     align-items: center;
 }
 
-.descriptionTitle{
+.descriptionTitle {
     margin-top: 1rem;
-    font-size: 15px;
     color: var(--mid);
-    
 }
 
 .descriptionBody {
     margin-top: 1rem;
     width: 80%;
+    height: 100%;
     color: var(--highlight);
     overflow: scroll;
 }
 
-.codeContainer{
-    height: 70vh;
-    width: 50vw;
-    text-align: center;
+.codeContainer {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.codeCard{
-    margin-top: 2rem;
+.codeCard {
     background-color: var(--dark);
-    width: 85%;
-    height: 90%;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: 10px solid var(--mid);
     color: var(--mid);
 }
 
-.commentsContainer{
-    height: 60vh;
-    width: 50vw;
+.commentsContainer {
+    height: 100%;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
 }
 
-.commentsCard{
-    margin-top: 2rem;
+.commentsCard {
     background-color: var(--dark);
-    width: 90%;
-    height: 85%;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border: 10px solid var(--mid);
     color: var(--mid);
 }
 
-.nextAlgoContainer{
-    height: 60vh;
-    width: 50vw;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.nextAlgoContainer {
+    height: 100%;
+    width: 100%;
 }
 
-.nextAlgoCard{
-    margin-top: 2rem;
+.nextAlgoCard {
     background-color: var(--dark);
-    width: 70%;
-    height: 70%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 10px solid var(--mid);
+    border-top: 10px solid var(--mid);
     color: var(--mid);
 }

@@ -3,6 +3,7 @@ import styles from '../styles/singleAlgorithmPage.module.css';
 import Comment from '../components/Comment';
 import axios from 'axios';
 import SortingVisualizer from '../components/SortingVisualizer/index';
+import { Grid, Row, Col } from '../components/GridRow';
 
 export default function SingleAlgorithmPage(props) {
   const [comments, setComments] = useState()
@@ -18,37 +19,53 @@ export default function SingleAlgorithmPage(props) {
 
   return (
     <>
-    <div className={styles.mainContainer}>
-        <div className={styles.sortingContainer}>
-          <SortingVisualizer algorithm={algorithm.function}/>
-        </div>
-        <div className={styles.descriptionContainer}>
-            <div className={styles.descriptionCard}>
-                <div className={styles.descriptionTitle}>
-                    <h1>{algorithm.name}</h1>
-                </div>
-                <div className={styles.descriptionBody}>
-                    <p>{algorithm.description}</p>
-                </div>
-            </div>
-        </div>
-            
-        <div className={styles.codeContainer}>
+    <Grid>
+      <Row>
+        <Col size={1}>
+          <div className={styles.sortingContainer}>
+            <SortingVisualizer algorithm={algorithm.function}/>
+          </div>
+        </Col>
+      </Row>
+
+      <Row height={'60em'}>
+        
+        <Col size={1}>
+          <div className={styles.codeContainer}>
             <div className={styles.codeCard}>
                 <iframe title={algorithm.name} frameBorder="0" width="100%" height="100%" src={algorithm.replitCode}></iframe>
             </div>
-        </div>
-            
-        <div className={styles.commentsContainer}>
-            {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData}/>}
-        </div>
+          </div>
+        </Col>
 
-        <div className={styles.nextAlgoContainer}>
-            <div className={styles.nextAlgoCard}>
-                <div></div>
-            </div>
-        </div>
-    </div>
+        <Col size={1}>
+          <div className={styles.descriptionContainer}>
+              <div className={styles.descriptionCard}>
+              
+                  <div className={styles.descriptionTitle}>
+                      <h1>{algorithm.name}</h1>
+                  </div>
+
+                  <div className={styles.descriptionBody}>
+                      <p>{algorithm.description}</p>
+                  </div>
+              <div className={styles.nextAlgoContainer}>
+                <div className={styles.nextAlgoCard}>NEXT ALGO CARD</div>
+              </div>
+              </div>
+          </div>
+        </Col>
+      </Row>
+
+      <Row marginTop={'3rem'}>
+        <Col size={1}>
+          <div className={styles.commentsContainer}>
+              {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData}/>}
+          </div>
+        </Col>
+      </Row>
+
+    </Grid>
     </>
   )
 }

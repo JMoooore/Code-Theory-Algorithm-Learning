@@ -11,7 +11,7 @@ algo.routeName = 'bubbleSort'
 
 algo.image = bubbleImage;
 
-algo.replitCode = "https://replit.com/@EmpatheticLions/Bubble-Sort?embed=true";
+algo.replitCode = "https://replit.com/@EmpatheticLions/Bubble-Sort?lite=true";
 
 algo.description =
     'Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.';
