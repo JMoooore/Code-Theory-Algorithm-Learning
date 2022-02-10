@@ -2,10 +2,12 @@ import React, {useState, useEffect} from 'react';
 import styles from '../styles/singleAlgorithmPage.module.css'
 import Comment from '../components/Comment';
 import axios from 'axios';
+import SortingVisualizer from '../components/SortingVisualizer/index'
+import algo from '../algos/bubbleSort';
 
 export default function SingleAlgorithmPage(props) {
   const [comments, setComments] = useState()
-  const algorithm = props.singleAlgo
+  const {algorithm} = props
 
   const getCommentData = () => {
     axios.get(`http://localhost:3001/comments/${algorithm.name}`)
@@ -18,11 +20,8 @@ export default function SingleAlgorithmPage(props) {
   return (
     <>
     <div className={styles.mainContainer}>
-        <div className={styles.animationContainer}>
-            <div className={styles.animationCard}>
-                <div className={styles.animationItem}></div>
-                <div className={styles.animationControls}></div>
-            </div>
+        <div className={styles.sortingContainer}>
+                <SortingVisualizer algorithm={algorithm.function}/>
         </div>
         <div className={styles.descriptionContainer}>
             <div className={styles.descriptionCard}>

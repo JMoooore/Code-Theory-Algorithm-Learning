@@ -65,6 +65,7 @@ const SortingVisualizer = props => {
     const handlePrevious = () => {
         if (!frame.previous || frame.previous === frames.head) return;
         setFrame(frame.previous);
+        setSorted(false)
     };
 
     const handleReset = () => {
