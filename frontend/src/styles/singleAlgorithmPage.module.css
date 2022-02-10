@@ -98,7 +98,8 @@
 }
 
 .nextAlgoCard {
-    background-color: var(--dark);
+    background-color: var(--highlight);
     border-top: 10px solid var(--mid);
     color: var(--mid);
+    padding-bottom: 4rem;
 }
