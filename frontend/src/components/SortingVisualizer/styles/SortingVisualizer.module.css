@@ -17,10 +17,9 @@
     border: .4em solid var(--mid);
     border-radius: 10px;
     background-color: var(--highlight);
+    margin-top: 2rem;
 }
 
-.controls > * {
-}
 .sliders{
     display:flex;
     flex-direction: column;
