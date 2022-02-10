@@ -3,6 +3,7 @@ import mergeImage from '../images/merge_img.svg'
 const algo = {}
 
 algo.name = 'Merge Sort'
+algo.routeName = 'mergeSort'
 
 algo.replitCode = "https://replit.com/@EmpatheticLions/Merge-Sort?embed=true";
 

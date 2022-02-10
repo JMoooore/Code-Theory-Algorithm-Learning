@@ -3,6 +3,7 @@ import insertionImage from '../images/insert_img.svg'
 const algo = {}
 
 algo.name = 'Insertion Sort'
+algo.routeName = 'insertionSort'
 
 algo.replitCode = "https://replit.com/@EmpatheticLions/Insertion-Sort?embed=true";
 
