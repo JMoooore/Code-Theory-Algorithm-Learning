@@ -4,8 +4,6 @@ import AlgoCard from '../components/AlgoCard';
 import algos from '../algos/index'
 
 export default function AllAlgosPage(props) {
-
-
   return (
       <>
         <div className={styles.backgroundAllAlgos}>
