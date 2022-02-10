@@ -6,13 +6,15 @@ export const Grid = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
-// border:10px solid red;
+  // border:10px solid red;
 
 export const Row = styled.div`
   display: flex;
   height: ${(props) => props.height};
-  margin: 1rem;
+  margin-top: ${(props) => props.marginTop}
 `;
+// margin: 1.8rem;
+// border:10px solid green;
 
 const media = {
   xs: (styles) => `
@@ -25,5 +27,7 @@ export const Col = styled.div`
   ${(props) => props.collapse && media[props.collapse](`
     display: none;
   `)};
+  height: 100%;
+  margin:2rem;
 `;
 // border:10px solid green;

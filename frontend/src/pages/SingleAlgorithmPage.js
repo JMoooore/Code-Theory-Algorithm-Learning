@@ -28,7 +28,7 @@ export default function SingleAlgorithmPage(props) {
         </Col>
       </Row>
 
-      <Row >
+      <Row height={'60em'}>
         
         <Col size={1}>
           <div className={styles.codeContainer}>
@@ -37,70 +37,35 @@ export default function SingleAlgorithmPage(props) {
             </div>
           </div>
         </Col>
+
         <Col size={1}>
           <div className={styles.descriptionContainer}>
               <div className={styles.descriptionCard}>
+              
                   <div className={styles.descriptionTitle}>
                       <h1>{algorithm.name}</h1>
                   </div>
-              <div className={styles.nextAlgoContainer}>
+
                   <div className={styles.descriptionBody}>
                       <p>{algorithm.description}</p>
                   </div>
+              <div className={styles.nextAlgoContainer}>
+                <div className={styles.nextAlgoCard}>NEXT ALGO CARD</div>
               </div>
-                {/* <div className={styles.nextAlgoCard}>NEXT ALGO CARD</div> */}
               </div>
           </div>
         </Col>
-
-        
       </Row>
 
-      <Row>
+      <Row marginTop={'3rem'}>
         <Col size={1}>
           <div className={styles.commentsContainer}>
               {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData}/>}
           </div>
         </Col>
-
-        {/* <Col size={1}>
-          
-        </Col> */}
       </Row>
 
     </Grid>
-    {/* <div className={styles.mainContainer}>
-        <div className={styles.sortingContainer}>
-          <SortingVisualizer algorithm={algorithm.function}/>
-        </div>
-
-        <div className={styles.descriptionContainer}>
-            <div className={styles.descriptionCard}>
-                <div className={styles.descriptionTitle}>
-                    <h1>{algorithm.name}</h1>
-                </div>
-                <div className={styles.descriptionBody}>
-                    <p>{algorithm.description}</p>
-                </div>
-            </div>
-        </div>
-            
-        <div className={styles.codeContainer}>
-            <div className={styles.codeCard}>
-                <iframe title={algorithm.name} frameBorder="0" width="100%" height="100%" src={algorithm.replitCode}></iframe>
-            </div>
-        </div>
-            
-        <div className={styles.commentsContainer}>
-            {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData}/>}
-        </div>
-
-        <div className={styles.nextAlgoContainer}>
-            <div className={styles.nextAlgoCard}>
-                <div></div>
-            </div>
-        </div>
-    </div> */}
     </>
   )
 }
