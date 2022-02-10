@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import styles from '../styles/singleAlgorithmPage.module.css'
+import styles from '../styles/singleAlgorithmPage.module.css';
 import Comment from '../components/Comment';
 import axios from 'axios';
-import SortingVisualizer from '../components/SortingVisualizer/index'
-import algo from '../algos/bubbleSort';
+import SortingVisualizer from '../components/SortingVisualizer/index';
 
 export default function SingleAlgorithmPage(props) {
   const [comments, setComments] = useState()
@@ -21,7 +20,7 @@ export default function SingleAlgorithmPage(props) {
     <>
     <div className={styles.mainContainer}>
         <div className={styles.sortingContainer}>
-                <SortingVisualizer algorithm={algorithm.function}/>
+                {algorithm.name === 'Bubble Sort' && <SortingVisualizer algorithm={algorithm.function}/>}
         </div>
         <div className={styles.descriptionContainer}>
             <div className={styles.descriptionCard}>
@@ -36,7 +35,7 @@ export default function SingleAlgorithmPage(props) {
             
         <div className={styles.codeContainer}>
             <div className={styles.codeCard}>
-                <iframe frameBorder="0" width="100%" height="100%" src={algorithm.replitCode}></iframe>
+                <iframe title={algorithm.name} frameBorder="0" width="100%" height="100%" src={algorithm.replitCode}></iframe>
             </div>
         </div>
             
