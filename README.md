@@ -59,7 +59,7 @@ This application serves as an educational tool for developers and students to vi
 
 
 ### Visuals
-[![Application Screen Shot][product-screenshot]](https://example.com)
+![Screen_Shot_2022-02-10_at_15.45.00](/uploads/24680510590ffe7ade171a2c118bce07/Screen_Shot_2022-02-10_at_15.45.00.png)
 <p align="right">(<a href="#top">back to top</a>)</p>
 </br>
 
