@@ -3,6 +3,7 @@ import selectImage from '../images/selection_img.svg'
 const algo = {}
 
 algo.name = 'Selection Sort'
+algo.routeName = 'selectionSort'
 
 algo.replitCode = "https://replit.com/@EmpatheticLions/Selection-Sort?embed=true";
 
