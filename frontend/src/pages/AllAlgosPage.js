@@ -9,7 +9,7 @@ export default function AllAlgosPage(props) {
         <div className={styles.backgroundAllAlgos}>
           <div className={styles.allCards}>
             {algorithmsArray.map((e,i) => {
-              return <AlgoCard algorithm={algorithmsArray[i]} setSingleAlgo={props.setSingleAlgo}/>
+              return <AlgoCard algorithm={algorithmsArray[i]} key={i} setSingleAlgo={props.setSingleAlgo}/>
             })}
           </div>
         </div>

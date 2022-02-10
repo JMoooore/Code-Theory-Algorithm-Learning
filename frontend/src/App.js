@@ -20,7 +20,7 @@ function App() {
           <Routes>
           
             <Route path="/algorithms_page" element={<AllAlgosPage setSingleAlgo={setSingleAlgo}/>} />
-            <Route path="/single_algo" element={<SingleAlgorithmPage singleAlgo={singleAlgo}/>} />
+            <Route path="/single_algo" element={<SingleAlgorithmPage singleAlgo={singleAlgo} setSingleAlgo={setSingleAlgo}/>} />
             <Route path="/" element={<Homepage />} />
 
           </Routes>
