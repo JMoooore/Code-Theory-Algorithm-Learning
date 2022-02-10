@@ -20,7 +20,7 @@ export default function SingleAlgorithmPage(props) {
     <>
     <div className={styles.mainContainer}>
         <div className={styles.sortingContainer}>
-                {algorithm.name === 'Bubble Sort' && <SortingVisualizer algorithm={algorithm.function}/>}
+          <SortingVisualizer algorithm={algorithm.function}/>
         </div>
         <div className={styles.descriptionContainer}>
             <div className={styles.descriptionCard}>
