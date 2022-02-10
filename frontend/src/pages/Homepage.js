@@ -20,7 +20,7 @@ export default function Homepage() {
                 <h1 className={styles.mainHomeTitleContent}>Code Theory</h1>
                 <p className={styles.mainHomeBodyContent}>Learning, Your Way</p>
                 <br></br>
-                <Link to='/algorithms_page'><button type="submit" className={styles.mainHomeBtn}>Explore</button></Link>
+                <Link to='/algorithms'><button type="submit" className={styles.mainHomeBtn}>Explore</button></Link>
             </div>
             </div>
         </div>
@@ -33,7 +33,7 @@ export default function Homepage() {
         <div className={styles.containerM}>
             <div className={styles.cardM}>
                 <p className={styles.titleMinfo}>Even if we're not conscious of it, we use algorithms all the time. Learning how to create algorithms not only lays a strong foundation in programming skills, but is also useful for developing logical thinking skills to write more dynamic computer code.</p>
-                <Link to='/algorithms_page'><p><button className={styles.btnM}>Explore</button></p></Link>
+                <Link to='/algorithms'><p><button className={styles.btnM}>Explore</button></p></Link>
             </div>
          </div>
      </div>
@@ -51,7 +51,7 @@ export default function Homepage() {
         <div className={styles.containerM}>
             <div className={styles.cardM}>
                 <p className={styles.titleMinfo}>Take the next step in your algorithm journey today.</p>
-                <Link to='/algorithms_page'><p><button className={styles.btnM}>Explore</button></p></Link>
+                <Link to='/algorithms'><p><button className={styles.btnM}>Explore</button></p></Link>
             </div>
          </div>
      </div>

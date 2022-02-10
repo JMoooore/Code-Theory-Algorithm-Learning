@@ -7,6 +7,7 @@ const SORTED_COLOR = '#d8ae5e';
 const algo = {};
 
 algo.name = 'Bubble Sort';
+algo.routeName = 'bubbleSort'
 
 algo.image = bubbleImage;
 

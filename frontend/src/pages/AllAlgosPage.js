@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from '../styles/allAlgos.module.css'
 import AlgoCard from '../components/AlgoCard';
-import algorithmsArray from '../algos/index'
+import algos from '../algos/index'
 
 export default function AllAlgosPage(props) {
   return (
       <>
         <div className={styles.backgroundAllAlgos}>
           <div className={styles.allCards}>
-            {algorithmsArray.map((e,i) => {
-              return <AlgoCard algorithm={algorithmsArray[i]} setSingleAlgo={props.setSingleAlgo}/>
+            {Object.values(algos).map((algo,index) => {
+              return <AlgoCard algorithm={algo} key={index} />
             })}
           </div>
         </div>
