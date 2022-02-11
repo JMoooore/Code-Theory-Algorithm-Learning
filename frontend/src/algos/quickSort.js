@@ -32,6 +32,7 @@ const algo = {};
 algo.name = 'Quick Sort';
 algo.routeName = 'quickSort';
 algo.image = quickImage
+algo.replitCode = "https://replit.com/@EmpatheticLions/Quick-Sort?lite=true";
 
 
 algo.description =
