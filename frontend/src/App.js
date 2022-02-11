@@ -22,6 +22,12 @@ function App() {
                             <SingleAlgorithmPage algorithm={algos.bubbleSort} />
                         }
                     />
+                    <Route
+                        path="/algorithms/quickSort"
+                        element={
+                            <SingleAlgorithmPage algorithm={algos.quickSort} />
+                        }
+                    />
                     <Route path="/" element={<Homepage />} />
                 </Routes>
 
