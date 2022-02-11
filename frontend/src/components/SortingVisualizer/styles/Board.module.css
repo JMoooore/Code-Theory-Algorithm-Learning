@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     width: 60em;
     justify-content: center;
     height: 300px;
