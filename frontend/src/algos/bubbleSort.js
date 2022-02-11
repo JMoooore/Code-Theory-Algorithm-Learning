@@ -16,6 +16,10 @@ algo.replitCode = "https://replit.com/@EmpatheticLions/Bubble-Sort?lite=true";
 algo.description =
     'Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.';
 
+algo.explanation = `Bubble sort uses nested for loops to repeatedly swap values to move the greater value to the right. It will start by comparing the first two values and moving the larger value to the right. Next, both indices will increment and repeat this process until they reach the index of the first for loop. The first for loop will decrement becuase the last value of the array is now the largest and it will turn orange to show it has been sorted.`
+
+algo.complexity = 'Time Complexity: O(n^2)'
+
 algo.function = function* sort(data) {
     data = deepCopy(data);
     yield deepCopy(data);
