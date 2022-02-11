@@ -11,6 +11,9 @@ import SignupPage from './pages/SignupPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
+    const [user, setUser] = useState(null) //user id for logged in user
+
+
     return (
         <Router>
             <div className="App">
@@ -31,7 +34,7 @@ function App() {
                         }
                     />
                     <Route path="/login" element={<LoginPage />} />
-                    <Route path="/signup" element={<SignupPage />} />
+                    <Route path="/signup" element={<SignupPage setUser={setUser} user={user}/>} />
                     <Route path="/" element={<Homepage />} />
                 </Routes>
 

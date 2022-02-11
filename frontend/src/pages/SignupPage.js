@@ -2,8 +2,9 @@ import React, { useState, useRef } from 'react';
 import '../styles/signupPage.css'
 import MainIconImg from '../images/mainicon.svg'
 import { Link, useNavigate } from "react-router-dom";   //useHistory is different for v-6 it is useNavigate
+import axios from 'axios';
 
-export default function SignupPage() {
+export default function SignupPage(props) {
     const firstNameRef = useRef()
     const lastNameRef = useRef()
     const emailRef = useRef()
@@ -25,6 +26,17 @@ export default function SignupPage() {
     };
 
     const [firstName, setFirstName] = useState("")
+
+    function handleCreateUser() {
+        axios.post('http://localhost:3001/users', {
+            email: emailRef.current.value,
+            first_name: firstNameRef.current.value,
+            last_name: lastNameRef.current.value,
+            password: passwordRef.current.value
+        })
+        .then(res => {props.setUser(res.data[0].id)})
+        .catch((err) => {console.log(err);})
+    }
     
     async function handleSubmit(e) {
         e.preventDefault()
@@ -37,6 +49,7 @@ export default function SignupPage() {
         } else if (passwordRef.current.value !== confirmPasswordRef.current.value) {
             changeErrStyle()
         } else {
+            handleCreateUser()
             setFirstName(firstNameRef.current.value)
             changeSuccessSignupStyle()
             setTimeout(() =>{
