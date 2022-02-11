@@ -84,9 +84,10 @@
     color: var(--light);
 }
 
-.commentText {
-    color: var(--light);
+.commentTextContainer {
     display: flex;
-    align-self: flex-end;
-    /* justify-self: flex-start; */
+    align-items: center;
+    text-align: left;
+    margin-left: 1rem;
+    color: var(--light);
 }

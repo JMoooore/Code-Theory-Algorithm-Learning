@@ -13,9 +13,8 @@ export default function Comment(props){
       content: commentText,
       algorithm: props.currentAlgo
     })
-    .then(res => {console.log(res)})
+    .then(res => {props.setNewComment(res.data[0])})
     .catch((err) => {console.log(err)})
-    console.log(`${commentId} said ${commentText}`);
   }
 
   return (
