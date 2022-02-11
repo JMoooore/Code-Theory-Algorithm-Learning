@@ -1,19 +1,15 @@
 # Frontend Capstone
 <div align=center>
 
-[![forthebadge][for-the-culture]](https://forthebadge.com)
-
 </div>
 
 <div align=center>
 <a href="https://gitlab.com/m7093/frontend-capstone">
-    <img src="./frontend/src/images/empathetic_lions.jpg" alt="Logo" width="200" height="150">
+    <img src="./frontend/src/images/empathetic_lions.jpg" alt="Logo" width="300" height="250">
   </a>
 </div>
 
 <div align=center>
-
-[![forthebadge][optimized]](https://forthebadge.com)
 
 </div>
 
