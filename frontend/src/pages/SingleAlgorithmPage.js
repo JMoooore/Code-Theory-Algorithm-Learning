@@ -11,7 +11,6 @@ export default function SingleAlgorithmPage(props) {
   const [comments, setComments] = useState()
   const [newComment, setNewComment] = useState()
   const {algorithm} = props
-   console.log(algoObj)
 
   const next = (obj) => {
       for(let key in obj){
