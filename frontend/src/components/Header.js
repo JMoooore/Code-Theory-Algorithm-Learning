@@ -15,7 +15,7 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
-            <div className={styles.headerLoginLink}>Login</div>
+            <Link to='/login'> <div className={styles.headerLoginLink}>Login</div></Link>
 
         </div>
     </>
