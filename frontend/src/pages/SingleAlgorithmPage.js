@@ -24,7 +24,7 @@ export default function SingleAlgorithmPage(props) {
   const getCommentData = () => {
     axios.get(`http://localhost:3001/comments/${algorithm.name}`)
     .then(res => {setComments(res.data)})
-    .catch(console.log('whoops'))
+    .catch(err => {console.log(err)})
   }
 
   useEffect(() => getCommentData(),[newComment])

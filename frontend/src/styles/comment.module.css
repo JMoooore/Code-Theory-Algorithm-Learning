@@ -33,7 +33,6 @@
     align-items: center;
     color: var(--mid);
     margin-bottom: 2rem;
-    text-decoration: underline;
     font-size: 3rem;
 }
 
@@ -53,9 +52,16 @@
     border-radius: 10px;
 }
 
+input {
+    text-align: center;
+}
+
+textarea {
+    text-align: center;
+}
+
 ::-webkit-input-placeholder {
     text-align: center;
-    justify-items: center;
 }
 
 .addCommentButton {
