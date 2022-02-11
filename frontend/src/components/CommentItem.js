@@ -11,7 +11,7 @@ export default function CommentItem(props) {
     return timeFromDB.toLocaleDateString()
   }
 
-  const handleDelete = (e, id) => {
+  const handleDelete = (id) => {
     axios.delete(`http://localhost:3001/comments/${id}`)
     .then(res => props.setNewComment(res.data[0]))
     .catch(err => console.log(err))
@@ -32,7 +32,7 @@ export default function CommentItem(props) {
           <p className={styles.commentText}>{content}</p>
         </div>
 
-        <img className={styles.trashCan} src={trash} alt='' onClick={(e) => handleDelete(e, id)} id={id}/>
+        <img className={styles.trashCan} src={trash} alt='' onClick={() => handleDelete(id)} id={id}/>
     </li>
   )
 }
