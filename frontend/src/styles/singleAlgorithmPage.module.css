@@ -102,3 +102,12 @@
     color: var(--mid);
     padding-bottom: 4rem;
 }
+
+.algoTitle{
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+}

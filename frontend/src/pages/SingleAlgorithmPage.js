@@ -33,7 +33,8 @@ export default function SingleAlgorithmPage(props) {
     <Grid>
       <Row>
         <Col size={1}>
-          <div className={styles.sortingContainer}>
+            <h1 className={styles.algoTitle}>{algorithm.name}</h1>
+            <div className={styles.sortingContainer}>
             <SortingVisualizer algorithm={algorithm.function}/>
           </div>
         </Col>
@@ -54,7 +55,7 @@ export default function SingleAlgorithmPage(props) {
               <div className={styles.descriptionCard}>
               
                   <div className={styles.descriptionTitle}>
-                      <h1>{algorithm.name}</h1>
+                      <h1>How It Works</h1>
                   </div>
 
                   <div className={styles.descriptionBody}>
