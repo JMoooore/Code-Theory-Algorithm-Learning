@@ -2,8 +2,9 @@ import React, { useState, useRef } from 'react';
 import '../styles/loginPage.css'
 import MainIconImg from '../images/mainicon.svg'
 import { Link, useNavigate } from "react-router-dom";   //useHistory is different for v-6 it is useNavigate
+import axios from 'axios';
 
-export default function LoginPage() {
+export default function LoginPage(props) {
     const emailRef = useRef()
     const passwordRef = useRef()
     const navigate = useNavigate()
@@ -11,6 +12,8 @@ export default function LoginPage() {
     const [errStyle, setErrStyle] = useState("hiddenErr"); 
     const changeErrStyle = () => {
         setErrStyle("shownErr");
+        passwordRef.current.value = null
+        emailRef.current.value = null
     };
 
     const [successLoginStyle, setSuccessLoginStyle] = useState("hiddenSuccessLogin"); 
@@ -25,20 +28,24 @@ export default function LoginPage() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const email = "email"
-        const password = "123"
-
-        if (passwordRef.current.value !== password || emailRef.current.value !== email) {
+        axios.get(`http://localhost:3001/users`)
+        .then(res => {
+            for(let i=0; i<res.data.length; i++) {
+                let current = res.data[i]
+                console.log(current.email);
+                console.log(emailRef.current.value);
+                if (current.email === emailRef.current.value && current.password === passwordRef.current.value) {
+                    props.setUser(current.id)
+                    setDisplayEmail(current.first_name)
+                    changeSuccesLoginStyle()
+                    setTimeout(() =>{
+                        navigate('/algorithms')
+                    }, 2000)
+                }
+            }
             changeErrStyle()
-        } else {
-            setDisplayEmail(email)
-            changeSuccesLoginStyle()
-            setTimeout(() =>{
-                navigate('/algorithms')
-            }, 2000)
-        } 
-        passwordRef.current.value = null
-        emailRef.current.value = null
+        })
+        .catch(err => {console.log(err)})
     }
 
     return (
