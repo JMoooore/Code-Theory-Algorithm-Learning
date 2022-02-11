@@ -6,7 +6,7 @@ export default function AlgoCard(props) {
     const {name, image, description, routeName} = props.algorithm
     const setSingleAlgo = props.setSingleAlgo
     const [isShown, setIsShown] = useState(false);
-    
+
   return (
 <>
 <div className={styles.cardDiv}>
@@ -15,11 +15,9 @@ export default function AlgoCard(props) {
     onMouseLeave={() => setIsShown(false)}>
         <Link to={`/algorithms/${routeName}`}><img className={styles.thumbnail} src={image} alt=''/></Link>
         <div className={styles.cardTitle}>{name}</div>
-        {isShown && (
-        <div className={styles.cardDescDiv}>
-        <p className={styles.cardDesc}>{description}</p>
+        <div className={isShown ? styles.cardDescDiv : styles.cardDescDivHidden}>
+          <p className={styles.cardDesc}>{description}</p>
         </div>
-      )}
     </div>
       
 </div>

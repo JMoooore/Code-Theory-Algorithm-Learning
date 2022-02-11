@@ -18,6 +18,4 @@
     display: flex;
     padding: 4rem;
     flex-wrap: wrap;
-    /* flex-direction: column; */
-    justify-content: space-between;
 }
