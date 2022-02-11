@@ -7,7 +7,7 @@ export default function Comment(props){
   const [commentText, setCommentText] = useState('')
   const [commentId, setCommentId] = useState('')
 
-  function handleSubmit(e){
+  function handleSubmit(){
     axios.post('http://localhost:3001/comments', {
       user_id: commentId,
       content: commentText,
@@ -38,7 +38,7 @@ export default function Comment(props){
       </form>
       
       {props.comments.map(e => {
-        return <CommentItem key={e.id} comment={e} />
+        return <CommentItem key={e.id} comment={e} setNewComment={props.setNewComment}/>
       })}
 
     </ul>

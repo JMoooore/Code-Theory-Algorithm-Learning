@@ -81,6 +81,7 @@ textarea {
     border: 2px solid var(--mid);
     border-radius: 10px;
     padding: 1.5rem;
+    position: relative;
 }
 
 .commentPhoto {
@@ -111,4 +112,15 @@ textarea {
     text-align: left;
     margin-left: 1rem;
     color: var(--light);
+}
+
+.trashCan {
+    height: 1.5rem;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.trashCan:hover {
+    cursor: pointer;
 }
