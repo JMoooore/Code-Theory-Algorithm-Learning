@@ -5,7 +5,7 @@ const Board = props => {
     const { nodeData, size } = props;
 
     const nodes = nodeData.map((node, index) => (
-        <Node value={node.value} key={index} color={node.color} />
+        <Node value={node.value} key={index} color={node.color} pivot={node.pivot} />
     ));
     return <div className={styles.container}>{nodes}</div>;
 };
