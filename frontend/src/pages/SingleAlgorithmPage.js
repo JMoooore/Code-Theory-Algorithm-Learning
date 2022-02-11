@@ -10,12 +10,18 @@ import algoObj from '../algos/index'
 export default function SingleAlgorithmPage(props) {
   const [comments, setComments] = useState()
   const [newComment, setNewComment] = useState()
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // for smoothly scrolling
+    });
+  };
   const {algorithm} = props
 
   const next = (obj) => {
       for(let key in obj){
           if(key !== algorithm.routeName){
-              return obj[key].image
+              return obj[key]
           }
       }
   }
@@ -65,7 +71,7 @@ export default function SingleAlgorithmPage(props) {
                   </div>
               <div className={styles.nextAlgoContainer}>
                 <div className={styles.nextAlgoCard}>
-                <Link to={`/algorithms`}><img className={styles.NextImg} src={next(algoObj)} alt=''/></Link>
+                <Link to={`/algorithms/${(next(algoObj)).routeName}`}><img onClick={scrollToTop} className={styles.NextImg} src={(next(algoObj)).image} alt=''/></Link>
                 </div>
               </div>
               </div>
