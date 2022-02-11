@@ -37,6 +37,10 @@ algo.image = quickImage
 algo.description =
     'Quicksort is an in-place sorting algorithm. Developed by British computer scientist Tony Hoare in 1959 and published in 1961, it is still a commonly used algorithm for sorting. When implemented well, it can be somewhat faster than merge sort and about two or three times faster than heapsort.';
 
+algo.explanation = 'Quicksort uses recursion to sort the array from smallest to largest value. First, the right most value is chosen as the pivot(shown in red). All of the unsorted values to the left of the pivot will be compared to the pivot. The numbers in blue are less than the value of the pivot. The numbers in coral are numbers that are greater than the pivot. The numbers will be sorted so that the coral numbers are closer to the pivot and all of the blue numbers to the left side. Once finished, the pivot will be placed in between the blue and coral numbers and then change to orange. This shows that the pivot is now sorted because all of the numbers less than the pivot are to the left and all of the numbers larger than the pivot are to the right. The process will repeat for sections of unsorted values(left to right).'
+
+algo.complexity = 'Time Complexity: Best: O(n log n) or Worst: O(n^2)'
+
 algo.function = function* (data) {
     data = deepCopy(data);
     yield deepCopy(data);

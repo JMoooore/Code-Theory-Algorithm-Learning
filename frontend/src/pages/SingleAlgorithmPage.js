@@ -58,7 +58,9 @@ export default function SingleAlgorithmPage(props) {
                   </div>
 
                   <div className={styles.descriptionBody}>
-                      <p>{algorithm.description}</p>
+                      <p>{algorithm.explanation}</p>
+                      <br/>
+                      <p>{algorithm.complexity}</p>
                   </div>
               <div className={styles.nextAlgoContainer}>
                 <div className={styles.nextAlgoCard}>
