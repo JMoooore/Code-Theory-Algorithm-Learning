@@ -18,7 +18,9 @@ export default function CommentItem(props) {
             <p className={styles.commentName}>{first_name} {last_name[0]}.</p>
             <span className={styles.commentTime}>{timeDifference()}</span>
         </div>
-        <p className={styles.commentText}>{content}</p>
+        <div className={styles.commentTextContainer}>
+          <p className={styles.commentText}>{content}</p>
+        </div>
     </li>
   )
 }

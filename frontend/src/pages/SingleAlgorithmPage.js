@@ -9,6 +9,7 @@ import algoObj from '../algos/index'
 
 export default function SingleAlgorithmPage(props) {
   const [comments, setComments] = useState()
+  const [newComment, setNewComment] = useState()
   const {algorithm} = props
    console.log(algoObj)
 
@@ -23,10 +24,10 @@ export default function SingleAlgorithmPage(props) {
   const getCommentData = () => {
     axios.get(`http://localhost:3001/comments/${algorithm.name}`)
     .then(res => {setComments(res.data)})
-    .catch(console.log('whoops'))
+    .catch(err => {console.log(err)})
   }
 
-  useEffect(() => getCommentData(),[])
+  useEffect(() => getCommentData(),[newComment])
 
   return (
     <>
@@ -73,7 +74,7 @@ export default function SingleAlgorithmPage(props) {
       <Row marginTop={'3rem'}>
         <Col size={1}>
           <div className={styles.commentsContainer}>
-              {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData}/>}
+              {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData} setNewComment={setNewComment}/>}
           </div>
         </Col>
       </Row>
