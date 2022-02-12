@@ -32,10 +32,8 @@ export default function LoginPage(props) {
         .then(res => {
             for(let i=0; i<res.data.length; i++) {
                 let current = res.data[i]
-                console.log(current.email);
-                console.log(emailRef.current.value);
                 if (current.email === emailRef.current.value && current.password === passwordRef.current.value) {
-                    props.setUser(current.id)
+                    props.setUser(current)
                     setDisplayEmail(current.first_name)
                     changeSuccesLoginStyle()
                     setTimeout(() =>{
