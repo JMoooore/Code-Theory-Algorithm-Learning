@@ -34,7 +34,7 @@ export default function SignupPage(props) {
             last_name: lastNameRef.current.value,
             password: passwordRef.current.value
         })
-        .then(res => {props.setUser(res.data[0].id)})
+        .then(res => {props.setUser(res.data[0])})
         .catch((err) => {console.log(err);})
     }
     
