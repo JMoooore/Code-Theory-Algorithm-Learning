@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import '../styles/signupPage.css'
+// import '../styles/signupPage.css'
+import styles from '../styles/signupPage.module.css'
 import MainIconImg from '../images/mainicon.svg'
 import { Link, useNavigate } from "react-router-dom";   //useHistory is different for v-6 it is useNavigate
 import axios from 'axios';
@@ -11,21 +12,16 @@ export default function SignupPage(props) {
     const passwordRef = useRef()
     const confirmPasswordRef = useRef()
     const navigate = useNavigate()
-
-    const [errStyle, setErrStyle] = useState("hiddenErr"); 
-    const changeErrStyle = () => {
-        setErrStyle("shownErr");
-    };
-
-    const [successsignupStyle, setSuccessSignupStyle] = useState("hiddenSuccesssignup"); 
-    const [signupCardStyle, setSuccessSignupCardStyle] = useState("shownsignupCard"); 
-    const changeSuccessSignupStyle = () => {
-        if(errStyle === "shownErr") setErrStyle("hiddenErr")
-        setSuccessSignupCardStyle("hiddenSuccesssignupCard")
-        setSuccessSignupStyle("shownSuccesssignup");
-    };
-
+    const [showErr, setShowErr] = useState(false);
+    const [showWelcome, setShowWelcome] = useState(false);
+    const [hideSignupCard, setHideSignupCard] = useState(false);
     const [firstName, setFirstName] = useState("")
+
+    const changeSuccessSignup = () => {
+        if(showErr) setShowErr(false)
+        setShowWelcome(true)
+        setHideSignupCard(true)
+    };
 
     function handleCreateUser() {
         axios.post('http://localhost:3001/users', {
@@ -34,7 +30,7 @@ export default function SignupPage(props) {
             last_name: lastNameRef.current.value,
             password: passwordRef.current.value
         })
-        .then(res => {props.setUser(res.data[0].id)})
+        .then(res => {props.setUser(res.data[0])})
         .catch((err) => {console.log(err);})
     }
     
@@ -45,13 +41,13 @@ export default function SignupPage(props) {
             !lastNameRef.current.value ||
             !firstNameRef.current.value ||
             !confirmPasswordRef.current.value) {
-            changeErrStyle()
+            setShowErr(true)
         } else if (passwordRef.current.value !== confirmPasswordRef.current.value) {
-            changeErrStyle()
+            setShowErr(true)
         } else {
             handleCreateUser()
             setFirstName(firstNameRef.current.value)
-            changeSuccessSignupStyle()
+            changeSuccessSignup()
             setTimeout(() =>{
                 navigate('/algorithms')
             }, 2000)
@@ -65,24 +61,22 @@ export default function SignupPage(props) {
 
     return (
         <>
-        <div className="mainsignupPageContainer">
-            <h1 className={successsignupStyle}>Welcome {firstName}!</h1>
-            <div className={signupCardStyle}>
-                <img className="signupTitleImg" src={MainIconImg}/>
-                <h1 className="signupTitle">Code Theory</h1>                        
-                <div>
-                    <p className={errStyle}>Whoops</p>
-                </div>                    
-                <form className="signupForm" onSubmit={handleSubmit}>
+        <div className={styles.mainSignupPageContainer}>
+            <h1 className={showWelcome ? styles.shownSignupWelcome : styles.hiddenSignupWelcome}>Welcome {firstName}!</h1>
+            <div className={hideSignupCard ? styles.hiddenSuccessSignupCard : styles.shownSignupCard}>
+                <img className={styles.signupTitleImg} src={MainIconImg}/>
+                <h1 className={styles.signupTitle}>Code Theory</h1>  
+                <div className={showErr ? styles.shownErr : styles.hiddenErr}><p>Whoops</p></div>
+                <form className={styles.signupForm} onSubmit={handleSubmit}>
                     <div><input type="text" placeholder='First Name..' ref={firstNameRef} /></div>
                     <div><input type="text" placeholder='Last Name..' ref={lastNameRef} /></div>
                     <div><input type="text" placeholder='Email..' ref={emailRef} /></div>
                     <div><input type="password"placeholder='Password..' ref={passwordRef}  /></div>
                     <div><input type="password"placeholder='Confirm Password..' ref={confirmPasswordRef}  /></div>
-                    <button type="submit" className="signupBtn">Create</button>
+                    <button type="submit" className={styles.signupBtn}>Create</button>
                 </form>   
                 <div>or</div>
-                <Link to='/login'> <h1 className="loginLink">Login</h1></Link>
+                <Link to='/login'> <h1 className={styles.loginLink}>Login</h1></Link>
             </div>
         </div>
         </>

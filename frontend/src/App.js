@@ -17,7 +17,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Header />
+                <Header user={user}/>
 
                 <Routes>
                     <Route path="/algorithms" element={<AllAlgosPage />} />
