@@ -7,6 +7,7 @@ import SingleAlgorithmPage from './pages/SingleAlgorithmPage';
 import algos from './algos/index.js';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 

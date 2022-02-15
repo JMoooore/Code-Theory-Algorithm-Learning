@@ -10,12 +10,15 @@
 
 .backgroundAllAlgos{
     background-color: var(--highlight);
-    min-height: 90vh;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1
 }
 
 .allCards{
     display: flex;
-    padding: 4rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

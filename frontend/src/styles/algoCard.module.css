@@ -11,64 +11,28 @@
     font-family: 'Source Code Pro', monospace;
 }
 
-.cardDiv{
-    display: flex;
-    margin-bottom: 4rem;
-}
-
-.cardMain{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 1s ease;
-}
-
-.cardMain:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.cardTitle{
-    color: var(--dark);
-    text-align: center;
-    padding-bottom: .5rem;
-    padding-top: .5rem;
-    font-size: 1.6rem;
+.title {
+    text-align:center;
     font-weight: bold;
+    margin-bottom: 1em;
 }
 
-.cardDescDiv{
+.image {
+    margin: 0px 20px 0px 0px;
+}
+.container {
     display: flex;
-    background-color: var(--mid);
+    justify-content: center;
+    height: 200px;
+    width: 800px;
+    padding: 1em;
+    margin: .5em 0;
+    border: 10px solid var(--dark);
     border-radius: 10px;
-    width: 30vw;
-    margin-left: 1rem;
-    box-shadow: 10px 10px 5px var(--dark);
+    transition: transform 200ms ease;
+
 }
 
-.cardDescDivHidden {
-    opacity: 0;
-    display: flex;
-    background-color: var(--mid);
-    border-radius: 10px;
-    width: 30vw;
-    margin-left: 1rem;
-    box-shadow: 10px 10px 5px var(--dark);
-}
-
-.cardDesc{
-    text-align: center;
-    margin: .8rem;
-    color: var(--dark);
-    font-size: 1.3rem;
-}
-
-.thumbnail{
-    display: flex;
-    justify-self: center;
-    padding-top: .5rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    height: 15rem;
-    width: 15rem;
+.container:hover {
+    transform: scale(1.05)
 }
