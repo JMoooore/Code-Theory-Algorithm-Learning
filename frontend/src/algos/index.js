@@ -8,6 +8,7 @@ export default {
     bubbleSort,
     quickSort,
     mergeSort,
+    insertionSort
 };
 
-export { bubbleSort, quickSort, mergeSort };
+export { bubbleSort, quickSort, mergeSort, insertionSort };
