@@ -6,7 +6,8 @@ import quickSort from './quickSort';
 
 export default {
     bubbleSort,
-    quickSort
+    quickSort,
+    insertionSort
 };
 
-export { bubbleSort, quickSort };
+export { bubbleSort, quickSort, insertionSort };
