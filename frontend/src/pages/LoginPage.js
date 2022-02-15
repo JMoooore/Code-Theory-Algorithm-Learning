@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import '../styles/loginPage.css'
+import styles from '../styles/loginPage.module.css'
 import MainIconImg from '../images/mainicon.svg'
 import { Link, useNavigate } from "react-router-dom";   //useHistory is different for v-6 it is useNavigate
 import axios from 'axios';
@@ -8,24 +8,17 @@ export default function LoginPage(props) {
     const emailRef = useRef()
     const passwordRef = useRef()
     const navigate = useNavigate()
+    const [showErr, setShowErr] = useState(false);
+    const [showWelcome, setShowWelcome] = useState(false);
+    const [hideLoginCard, setHideLoginCard] = useState(false)
+    const [displayName, setDisplayName] = useState("")
 
-    const [errStyle, setErrStyle] = useState("hiddenErr"); 
-    const changeErrStyle = () => {
-        setErrStyle("shownErr");
-        passwordRef.current.value = null
-        emailRef.current.value = null
-    };
-
-    const [successLoginStyle, setSuccessLoginStyle] = useState("hiddenSuccessLogin"); 
-    const [loginCardStyle, setSuccessLoginCardStyle] = useState("shownLoginCard"); 
-    const changeSuccesLoginStyle = () => {
-        if(errStyle === "shownErr") setErrStyle("hiddenErr")
-        setSuccessLoginCardStyle("hiddenSuccessLoginCard")
-        setSuccessLoginStyle("shownSuccessLogin");
+    const changeSuccesLogin = () => {
+        if(showErr) setShowErr(false)
+        setHideLoginCard(true)
+        setShowWelcome(true)
     };
     
-    const [displayEmail, setDisplayEmail] = useState("")
-
     async function handleSubmit(e) {
         e.preventDefault()
         axios.get(`http://localhost:3001/users`)
@@ -34,35 +27,35 @@ export default function LoginPage(props) {
                 let current = res.data[i]
                 if (current.email === emailRef.current.value && current.password === passwordRef.current.value) {
                     props.setUser(current)
-                    setDisplayEmail(current.first_name)
-                    changeSuccesLoginStyle()
+                    setDisplayName(current.first_name)
+                    changeSuccesLogin()
+                    setShowErr(false)
                     setTimeout(() =>{
                         navigate('/algorithms')
                     }, 2000)
+                } else {
+                    setShowErr(true)
                 }
             }
-            changeErrStyle()
         })
         .catch(err => {console.log(err)})
     }
 
     return (
         <>
-        <div className="mainLoginPageContainer">
-            <h1 className={successLoginStyle}>Welcome Back {displayEmail}!</h1>
-            <div className={loginCardStyle}>
-                <img className="loginTitleImg" src={MainIconImg}/>
-                <h1 className="loginTitle">Code Theory</h1>                        
-                <div>
-                    <p className={errStyle}>Invalid username and/or password</p>
-                </div>                    
-                <form className="loginForm" onSubmit={handleSubmit}>
+        <div className={styles.mainLoginPageContainer}>
+            <h1 className={showWelcome ? styles.shownSuccessLogin : styles.hiddenSuccessLogin}>Welcome Back {displayName}</h1>   
+            <div className={hideLoginCard ? styles.hiddenSuccessLoginCard :  styles.shownLoginCard }>
+                <img className={styles.loginTitleImg} src={MainIconImg}/>
+                <h1 className={styles.loginTitle}>Code Theory</h1>                        
+                <h1 className={showErr ? styles.shownErr : styles.hiddenErr}>Invalid username and/or password</h1>                
+                <form className={styles.loginForm} onSubmit={handleSubmit}>
                     <div><input type="text" placeholder='Email..' ref={emailRef} /></div>
                     <div><input type="password"placeholder='Password..' ref={passwordRef}  /></div>
-                    <button type="submit" className="loginBtn">Login</button>
+                    <button type="submit" className={styles.loginBtn}>Login</button>
                 </form>
                 <div>or</div>
-               <Link to="/signup"> <h1 className="signUpLink">Sign Up</h1></Link>
+               <Link to="/signup"> <h1 className={styles.signUpLink}>Sign Up</h1></Link>
             </div>
         </div>
         </>

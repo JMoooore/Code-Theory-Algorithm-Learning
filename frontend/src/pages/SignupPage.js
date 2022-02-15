@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-// import '../styles/signupPage.css'
 import styles from '../styles/signupPage.module.css'
 import MainIconImg from '../images/mainicon.svg'
 import { Link, useNavigate } from "react-router-dom";   //useHistory is different for v-6 it is useNavigate
