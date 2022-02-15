@@ -1,10 +1,14 @@
 import insertionImage from '../images/insert_img.svg'
 import deepCopy from '../utils/deepCopy'
+import nextImage from '../images/bubble_img.svg'
+
 
 const algo = {}
 
 algo.name = 'Insertion Sort'
 algo.routeName = 'insertionSort'
+algo.next = 'bubbleSort'
+algo.nextImage = nextImage
 
 algo.replitCode = "https://replit.com/@EmpatheticLions/Insertion-Sort?lite=true";
 

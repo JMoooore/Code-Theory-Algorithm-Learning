@@ -1,6 +1,7 @@
 import bubbleImage from '../images/bubble_img.svg';
 import deepCopy from '../utils/deepCopy.js';
-
+import nextImage from '../images/quick_img.svg'
+ 
 const ACTIVE_COLOR = 'dodgerblue';
 const SORTED_COLOR = 'orange';
 
@@ -8,8 +9,9 @@ const algo = {};
 
 algo.name = 'Bubble Sort';
 algo.routeName = 'bubbleSort'
-
 algo.image = bubbleImage;
+algo.next = 'quickSort'
+algo.nextImage = nextImage
 
 algo.replitCode = "https://replit.com/@EmpatheticLions/Bubble-Sort?lite=true";
 
