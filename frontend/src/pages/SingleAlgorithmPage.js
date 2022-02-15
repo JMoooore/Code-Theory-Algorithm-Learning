@@ -82,7 +82,7 @@ export default function SingleAlgorithmPage(props) {
       <Row marginTop={'3rem'}>
         <Col size={1}>
           <div className={styles.commentsContainer}>
-              {comments && <Comment comments={comments} currentAlgo={algorithm.name} getCommentData={getCommentData} setNewComment={setNewComment}/>}
+              {comments && <Comment comments={comments} currentUser={props.user} currentAlgo={algorithm.name} getCommentData={getCommentData} setNewComment={setNewComment}/>}
           </div>
         </Col>
       </Row>
