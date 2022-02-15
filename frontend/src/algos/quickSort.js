@@ -1,5 +1,6 @@
 import deepCopy from '../utils/deepCopy.js';
 import quickImage from '../images/quick_img.svg';
+import {hlNode, hlNodes, hlNodesBetween} from '../utils/highlighting.js';
 
 
 const SORTED_COLOR = 'orange'
@@ -7,25 +8,6 @@ const LESS_COLOR = 'dodgerblue'
 const MORE_COLOR = 'coral'
 const PIVOT_COLOR = 'red'
 
-const hlNodesBetween = (array, left, right, color) => {
-    if (left >= right) return;
-    for (let i = left; i <= right; i++) {
-        const currentNode = array[i];
-        currentNode.color = color;
-    }
-};
-
-const hlNodes = (array, indexes, color) => {
-    for (let index of indexes) {
-        if (index < 0) continue;
-        array[index].color = color;
-    }
-};
-
-const hlNode = (array, index, color) => {
-    if (!array[index]) return;
-    array[index].color = color;
-};
 
 const algo = {};
 
