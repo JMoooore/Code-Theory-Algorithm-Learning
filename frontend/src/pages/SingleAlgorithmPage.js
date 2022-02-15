@@ -5,7 +5,7 @@ import Comment from '../components/Comment';
 import axios from 'axios';
 import SortingVisualizer from '../components/SortingVisualizer/index';
 import { Grid, Row, Col } from '../components/GridRow';
-import algoObj from '../algos/index'
+// import algoObj from '../algos/index'
 
 export default function SingleAlgorithmPage(props) {
   const [comments, setComments] = useState()
@@ -18,13 +18,13 @@ export default function SingleAlgorithmPage(props) {
   };
   const {algorithm} = props
 
-  const next = (obj) => {
-      for(let key in obj){
-          if(key !== algorithm.routeName){
-              return obj[key]
-          }
-      }
-  }
+  // const next = (obj) => {
+  //     for(let key in obj){
+  //         if(key !== algorithm.routeName){
+  //             return obj[key]
+  //         }
+  //     }
+  // }
 
   const getCommentData = () => {
     axios.get(`http://localhost:3001/comments/${algorithm.name}`)
@@ -71,7 +71,7 @@ export default function SingleAlgorithmPage(props) {
                   </div>
               <div className={styles.nextAlgoContainer}>
                 <div className={styles.nextAlgoCard}>
-                <Link to={`/algorithms/${(next(algoObj)).routeName}`}><img onClick={scrollToTop} className={styles.NextImg} src={(next(algoObj)).image} alt=''/></Link>
+                <Link to={`/algorithms/${algorithm.next}`}><img onClick={scrollToTop} className={styles.NextImg} src={algorithm.nextImage} alt=''/></Link>
                 </div>
               </div>
               </div>
