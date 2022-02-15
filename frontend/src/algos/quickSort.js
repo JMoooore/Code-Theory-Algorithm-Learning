@@ -1,6 +1,7 @@
 import deepCopy from '../utils/deepCopy.js';
 import quickImage from '../images/quick_img.svg';
 import {hlNode, hlNodes, hlNodesBetween} from '../utils/highlighting.js';
+import  nextImage from '../images/merge_img.svg'
 
 
 const SORTED_COLOR = 'orange'
@@ -13,6 +14,8 @@ const algo = {};
 
 algo.name = 'Quick Sort';
 algo.routeName = 'quickSort';
+algo.next = 'mergeSort'
+algo.nextImage = nextImage
 algo.image = quickImage
 algo.replitCode = "https://replit.com/@EmpatheticLions/Quick-Sort?lite=true";
 

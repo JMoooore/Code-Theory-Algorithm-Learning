@@ -1,6 +1,8 @@
 import mergeImage from '../images/merge_img.svg';
 import deepCopy from '../utils/deepCopy.js';
 import { hlNode, hlNodes, hlNodesBetween } from '../utils/highlighting.js';
+import nextImage from '../images/insert_img.svg'
+
 
 const algo = {};
 
@@ -8,7 +10,8 @@ const ACTIVE_COLOR = 'dodgerblue';
 
 algo.name = 'Merge Sort';
 algo.routeName = 'mergeSort';
-
+algo.next = 'insertionSort'
+algo.nextImage= nextImage
 algo.replitCode = 'https://replit.com/@EmpatheticLions/Merge-Sort?lite=true';
 
 algo.description =
