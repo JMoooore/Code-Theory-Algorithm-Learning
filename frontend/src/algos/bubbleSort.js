@@ -2,7 +2,7 @@ import bubbleImage from '../images/bubble_img.svg';
 import deepCopy from '../utils/deepCopy.js';
 
 const ACTIVE_COLOR = 'dodgerblue';
-const SORTED_COLOR = '#d8ae5e';
+const SORTED_COLOR = 'orange';
 
 const algo = {};
 
