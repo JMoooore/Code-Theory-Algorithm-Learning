@@ -23,25 +23,25 @@ function App() {
                     <Route
                         path="/algorithms/bubbleSort"
                         element={
-                            <SingleAlgorithmPage algorithm={algos.bubbleSort} />
+                            <SingleAlgorithmPage algorithm={algos.bubbleSort} user={user}/>
                         }
                     />
                     <Route
                         path="/algorithms/quickSort"
                         element={
-                            <SingleAlgorithmPage algorithm={algos.quickSort} />
+                            <SingleAlgorithmPage algorithm={algos.quickSort} user={user}/>
                         }
                     />
                     <Route
                         path="/algorithms/mergeSort"
                         element={
-                            <SingleAlgorithmPage algorithm={algos.mergeSort} />
+                            <SingleAlgorithmPage algorithm={algos.mergeSort} user={user}/>
                         }
                     />
                     <Route
                         path="/algorithms/insertionSort"
                         element={
-                            <SingleAlgorithmPage algorithm={algos.insertionSort} />
+                            <SingleAlgorithmPage algorithm={algos.insertionSort} user={user}/>
                         }
                     />
                     <Route
