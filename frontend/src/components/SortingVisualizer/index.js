@@ -25,7 +25,7 @@ const SortingVisualizer = props => {
     const [playing, setPlaying] = useState(false);
 
     const isPlaying = useRef(false);
-    const algoSpeed = useRef();
+    const algoSpeed = useRef(INITIAL_ALGO_SPEED);
 
     const generateFrames = data => {
         const newFrames = new LinkedList();
@@ -65,7 +65,7 @@ const SortingVisualizer = props => {
     const handlePrevious = () => {
         if (!frame.previous || frame.previous === frames.head) return;
         setFrame(frame.previous);
-        setSorted(false)
+        setSorted(false);
     };
 
     const handleReset = () => {
