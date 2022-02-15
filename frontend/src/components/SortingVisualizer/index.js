@@ -83,6 +83,7 @@ const SortingVisualizer = props => {
 
     useEffect(() => setNodes(data.slice(0, dataSize)), [data, dataSize]);
     useEffect(() => generateFrames(nodes), [nodes]);
+    useEffect(() => handleReset, [algorithm]);
 
     return (
         <div className={styles.container}>
