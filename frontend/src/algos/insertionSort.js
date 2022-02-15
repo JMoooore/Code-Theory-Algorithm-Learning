@@ -24,8 +24,8 @@ algo.function = function* insertion(data) {
         let h = i - 1
         
         while(data[h]?.value > data[current]?.value && h > -1){
-            data[current].color = 'blue'
-            data[h].color = 'blue'
+            data[current].color = 'dodgerblue'
+            data[h].color = 'dodger'
             yield deepCopy(data)
 
             let temp = data[current]
