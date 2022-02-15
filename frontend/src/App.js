@@ -33,6 +33,12 @@ function App() {
                             <SingleAlgorithmPage algorithm={algos.quickSort} />
                         }
                     />
+                    <Route
+                        path="/algorithms/insertionSort"
+                        element={
+                            <SingleAlgorithmPage algorithm={algos.insertionSort} />
+                        }
+                    />
                     <Route path="/login" element={<LoginPage setUser={setUser}/>} />
                     <Route path="/signup" element={<SignupPage setUser={setUser} user={user}/>} />
                     <Route path="/" element={<Homepage />} />
