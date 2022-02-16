@@ -119,6 +119,8 @@ textarea {
     position: absolute;
     right: 0.5rem;
     bottom: 0.5rem;
+    filter: invert(73%) sepia(68%) saturate(377%) hue-rotate(349deg)
+        brightness(94%) contrast(79%);
 }
 
 .trashCan:hover {
